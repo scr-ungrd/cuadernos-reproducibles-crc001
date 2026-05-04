@@ -1,0 +1,5 @@
+_build/
+.DS_Store
+*.py[cod]
+__pycache__/
+.jupyter_cache/
