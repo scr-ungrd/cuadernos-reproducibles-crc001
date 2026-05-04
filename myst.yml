@@ -82,7 +82,6 @@ project:
   jupyter: true
 site:
   title: La Palma Seismicity 2021
-  url: https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001
   options:
     logo_text: La Palma Seismicity 2021
   nav:
