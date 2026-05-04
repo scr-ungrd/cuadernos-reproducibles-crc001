@@ -1,28 +1,26 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: La Palma Seismicity 2021
-  subtitle: An analysis of earthquake swarms in relation to the 2021 eruption
+  title: Proyección de Temperatura en Bogotá bajo Escenarios de Cambio Climático
   authors:
-    - id: spurves
-      name: Steve Purves
-      orcid: 0000-0002-0760-5497
+    - id: mromerot
+      name: Mauricio Romero
+      orcid: 0000-0003-3282-0372
       corresponding: true
-      email: steve@curvenote.com
+      email: mauricio.romero@gestiondelriesgo.gov.co
       roles:
         - Investigation
         - Project administration
         - Software
         - Visualization
       affiliations:
-        - curvenote
-    - id: rcockett
-      name: Rowan Cockett
-      orcid: 0000-0002-7859-8394
+        - UNGRD, Subdirección para el Conocimiento
+    - id: msantizo
+      name: Moises Santizo
       corresponding: false
       role: Project administration
       affiliations:
-        - curvenote
+        - UNGRD, Subdirección para el Conocimiento
   affiliations:
     - id: curvenote
       name: Curvenote Inc.
@@ -43,14 +41,11 @@ project:
       source:
         - name: Alfred P. Sloan Foundation
           doi: http://dx.doi.org/10.13039/100000879
-  subject: Original Submission
-  venue:
-    title: Notebooks Now!
-    url: https://data.agu.org/notebooks-now/
   keywords:
-    - La Palma
-    - Earthquakes
-  date: 2022-10-11
+    - Cambio climático
+    - Proyección de temperatura
+    - Bogotá
+  date: 2026-05-04
   requirements:
     - environment.yml
   resources:
@@ -59,31 +54,31 @@ project:
     - data/lapalma_ign.csv
   banner: ./images/banner.png
   options:
-    journal_name: Notebooks Now!
+    journal_name: Cuadernos Reproducibles de Conocimiento
     draft: false
   exports:
     - format: meca
-      article: article.md
+      article: article.ipynb
       output: meca.zip
     - format: jats
-      article: article.md
+      article: article.ipynb
       sub_articles:
         - notebooks/seismic-monitoring.md
         - notebooks/data-screening.ipynb
         - notebooks/visualization-figure-creation-seaborn.ipynb
     - format: pdf
-      article: article.md
+      article: article.ipynb
       output: article.pdf
       template: agu2019
     - format: tex
-      article: article.md
+      article: article.ipynb
       output: tex.zip
       template: agu2019
   jupyter: true
 site:
-  title: La Palma Seismicity 2021
+  title: Proyección Temperatura Cambio Climático Bogotá
   options:
-    logo_text: La Palma Seismicity 2021
+    logo_text: Bogotá proyección climática
   nav:
     - title: MyST Docs
       url: https://mystmd.org/guide
