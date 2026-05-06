@@ -63,7 +63,6 @@ project:
     - format: jats
       article: article.ipynb
       sub_articles:
-        - notebooks/seismic-monitoring.md
         - notebooks/data-screening.ipynb
         - notebooks/visualization-figure-creation-seaborn.ipynb
     - format: pdf
@@ -74,7 +73,7 @@ project:
       article: article.ipynb
       output: tex.zip
       template: agu2019
-  jupyter: true
+  jupyter: false
 site:
   title: Proyección Temperatura Cambio Climático Bogotá
   options:
