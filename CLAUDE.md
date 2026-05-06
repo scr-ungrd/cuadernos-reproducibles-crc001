@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A reproducible research publication on La Palma 2021 seismicity, built with [MyST Markdown](https://mystmd.org/) and submitted to AGU's Notebooks Now! initiative. The output is a multi-format scientific article (HTML site, PDF via AGU LaTeX template, JATS, MECA).
+A reproducible research publication on temperature projections for Montería, Córdoba (Caribbean coast of Colombia) under climate change scenarios (RCP 2.6/4.5/6.0/8.5), built with [MyST Markdown](https://mystmd.org/) and submitted to AGU's Notebooks Now! initiative. The output is a multi-format scientific article (HTML site, PDF via AGU LaTeX template, JATS, MECA). Uses the CLIMADA probabilistic risk platform (ETH Zurich) with pattern-scaling methodology, horizon 2024–2074.
 
 ## Environment Setup
 
@@ -13,7 +13,7 @@ conda env create -f environment.yml
 conda activate lapalma-earthquakes
 ```
 
-The conda environment (`lapalma-earthquakes`) includes JupyterLab ≥4 with the `jupyterlab-myst` extension.
+The conda environment (`lapalma-earthquakes`) includes JupyterLab ≥4 with the `jupyterlab-myst` extension. The main analysis point is Montería (8.7479° N, 75.8814° W, 15 m a.s.l.), with T_base = 27.5 °C and regional amplification factor FAR = 1.05 (IPCC AR6 CAR domain).
 
 ## Build Commands
 
@@ -55,4 +55,4 @@ The notebooks must be run in order (data-screening before visualization). `myst 
 
 ## Data
 
-`data/lapalma_ign.csv` is the primary dataset (IGN catalog, 11 Sep – 9 Nov 2021). Columns: `Event`, `Date`, `Time`, `Latitude`, `Longitude`, `Depth`, `Magnitude`, `Location`, `DateTime`, `Swarm`, `Phase`.
+`data/lapalma_ign.csv` is a legacy dataset from the original La Palma template (not used by `article.ipynb`). The main article generates all data synthetically via CLIMADA's GMST ensemble (`get_gmst_info()`). The analysis point is Montería, Córdoba (Colombia).

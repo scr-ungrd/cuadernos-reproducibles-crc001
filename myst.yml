@@ -1,7 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: Proyección de Temperatura en Bogotá bajo Escenarios de Cambio Climático
+  title: Proyección de Temperatura en Montería, Córdoba bajo Escenarios de Cambio Climático
   authors:
     - id: mromerot
       name: Mauricio Romero
@@ -48,7 +48,10 @@ project:
   keywords:
     - Cambio climático
     - Proyección de temperatura
-    - Bogotá
+    - Montería
+    - Córdoba
+    - Caribe colombiano
+    - Estrés térmico
   date: 2026-05-04
   requirements:
     - environment.yml
@@ -79,9 +82,9 @@ project:
       template: agu2019
   jupyter: false
 site:
-  title: Proyección Temperatura Cambio Climático Bogotá
+  title: Proyección Temperatura Cambio Climático Montería
   options:
-    logo_text: Bogotá proyección climática
+    logo_text: Montería proyección climática
   nav:
     - title: MyST Docs
       url: https://mystmd.org/guide
