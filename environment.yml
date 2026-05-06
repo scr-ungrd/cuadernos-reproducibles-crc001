@@ -1,8 +1,9 @@
 name: lapalma-earthquakes
 channels:
   - conda-forge
-  - default
+  - defaults
 dependencies:
+  - python=3.11
   - numpy
   - matplotlib
   - pandas
@@ -12,3 +13,6 @@ dependencies:
   - plotly
   - jupyterlab>=4.0.0
   - jupyterlab-myst>=2.0.0
+  - pip
+  - pip:
+    - climada

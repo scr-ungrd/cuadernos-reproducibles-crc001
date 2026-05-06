@@ -31,6 +31,10 @@ project:
       phone: 123-456-7890
       fax: 123-456-7891
   github: https://github.com/scr-ungrd/cuadernos-reproducibles-CRC001
+  binder:
+    url: https://mybinder.org
+    repo: scr-ungrd/cuadernos-reproducibles-CRC001
+    ref: main
   open_access: true
   license:
     content: CC-BY-SA-4.0
