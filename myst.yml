@@ -52,6 +52,7 @@ project:
     - Córdoba
     - Caribe colombiano
     - Estrés térmico
+  doi: 10.5281/zenodo.20061610
   date: 2026-05-04
   requirements:
     - environment.yml
