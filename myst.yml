@@ -30,8 +30,8 @@ project:
       email: support@curvenote.com
       phone: 123-456-7890
       fax: 123-456-7891
-  github: https://github.com/scr-ungrd/cuadernos-reproducibles-CRC001
-  binder: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-CRC001/main
+  github: https://github.com/scr-ungrd/cuadernos-reproducibles-crc001
+  binder: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc001/main
   open_access: true
   license:
     content: CC-BY-SA-4.0

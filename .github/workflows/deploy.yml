@@ -31,7 +31,7 @@ jobs:
       - name: Build MyST site
         run: myst build --html
         env:
-          BASE_URL: /cuadernos-reproducibles-CRC001
+          BASE_URL: /cuadernos-reproducibles-crc001
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
