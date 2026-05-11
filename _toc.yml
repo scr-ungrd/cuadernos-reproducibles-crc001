@@ -4,5 +4,4 @@
 format: jb-book
 root: article
 chapters:
-  - file: notebooks/data-screening
-  - file: notebooks/visualization-figure-creation-seaborn
+  - file: notebooks/data-screening-visualization

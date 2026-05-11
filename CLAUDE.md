@@ -39,13 +39,9 @@ The publication follows a linear execution pipeline:
 
 1. **`article.ipynb`** — Main scientific text (MyST markdown with frontmatter, as a Jupyter notebook). References figures produced by the notebooks using MyST cross-reference syntax (`{numref}`, `{cite}`).
 
-2. **`notebooks/data-screening.ipynb`** — Loads raw IGN earthquake catalog from `data/lapalma_ign.csv`, filters to La Palma events (5,465 events), and outputs cleaned data used downstream.
+2. **`notebooks/data-screening-visualization.ipynb`** — Three complementary analyses: (A) historical GMST context 1880–2100 with warming-rate trend, (B) FAR sensitivity analysis showing how regional amplification uncertainty propagates to projected temperatures, (C) Time of Emergence analysis determining when the warming signal robustly exceeds natural variability for each RCP.
 
-3. **`notebooks/visualization-figure-creation-seaborn.ipynb`** — Generates static figures from the screened data using Seaborn/Matplotlib; figures are embedded into `article.ipynb`.
-
-4. **`notebooks/seismic-monitoring.md`** — Static markdown chapter describing the 12-station monitoring network (no execution required).
-
-The notebooks must be run in order (data-screening before visualization). `myst build` handles execution via Jupyter when building.
+`myst build` handles notebook execution via Jupyter when building.
 
 ## Key Configuration
 
