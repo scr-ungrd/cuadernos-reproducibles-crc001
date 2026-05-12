@@ -57,6 +57,8 @@ project:
     - README.md
     - data/catalogoComunSV_1663233588717.csv
     - data/lapalma_ign.csv
+  bibliography:
+    - references.bib
   banner: ./images/banner.png
   options:
     journal_name: Cuadernos Reproducibles de Conocimiento
