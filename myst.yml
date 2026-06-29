@@ -3,33 +3,16 @@ version: 1
 project:
   title: Proyección de Temperatura en Montería, Córdoba bajo Escenarios de Cambio Climático
   authors:
-    - id: mromerot
-      name: Mauricio Romero
-      orcid: 0000-0003-3282-0372
-      corresponding: true
-      email: mauricio.romero@gestiondelriesgo.gov.co
-      roles:
-        - Investigation
-        - Project administration
-        - Software
-        - Visualization
+    - name: Subdirección para el Conocimiento del Riesgo
       affiliations:
-        - UNGRD, Subdirección para el Conocimiento
-    - id: msantizo
-      name: Moises Santizo
-      corresponding: false
-      role: Project administration
-      affiliations:
-        - UNGRD, Subdirección para el Conocimiento
+        - ungrd
   affiliations:
-    - id: curvenote
-      name: Curvenote Inc.
-      department: Publications Team
-      country: Canada
-      url: https://curvenote.com
-      email: support@curvenote.com
-      phone: 123-456-7890
-      fax: 123-456-7891
+    - id: ungrd
+      institution: Unidad Nacional para la Gestión del Riesgo de Desastres
+      department: Subdirección de Conocimiento del Riesgo
+      city: Bogotá
+      country: Colombia
+      url: https://www.gestiondelriesgo.gov.co
   github: https://github.com/scr-ungrd/cuadernos-reproducibles-crc001
   binder: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc001/main
   open_access: true
