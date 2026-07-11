@@ -43,8 +43,11 @@ project:
   bibliography:
     - references.bib
   banner: ./images/banner.png
+  downloads:
+    - id: article-pdf
+      title: Generar PDF
   options:
-    journal_name: Cuadernos Reproducibles de Conocimiento
+    journal_name: Notebooks Now!
     draft: false
   exports:
     - format: meca
@@ -56,12 +59,17 @@ project:
         - notebooks/data-screening-visualization.ipynb
     - format: pdf
       article: article.ipynb
-      output: article.pdf
+      output: article-agu.pdf
       template: agu2019
     - format: tex
       article: article.ipynb
       output: tex.zip
       template: agu2019
+    - format: typst
+      article: article.ipynb
+      output: article.pdf
+      template: ./_templates/plain-typst-article
+      id: article-pdf
   jupyter: false
 site:
   title: Proyección Temperatura Cambio Climático Montería
