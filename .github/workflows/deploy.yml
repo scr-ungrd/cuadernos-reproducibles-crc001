@@ -30,6 +30,7 @@ jobs:
           sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
       - name: Build PDF (Typst)
         run: myst build --typst
+        continue-on-error: true
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:

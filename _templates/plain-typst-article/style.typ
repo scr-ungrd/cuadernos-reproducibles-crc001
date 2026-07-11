@@ -15,6 +15,11 @@
 #let accent-grey  = rgb("#b3b3b3")
 #let summary-blue = rgb("#0a2f5c")
 
+// mystmd's LaTeX-to-Typst math converter emits the bare identifier `diff`
+// for \partial, which is not a builtin symbol in current Typst releases.
+// Shim it so partial-derivative equations compile.
+#let diff = "∂"
+
 // --- [ tables ] --------------------------------------------------------------
 
 #let toprule(color: accent-red) = {

@@ -1,4 +1,4 @@
-#import "style.typ": template, summary
+#import "style.typ": template, summary, diff
 
 #show: template.with(
   title: "[-doc.title-]",
