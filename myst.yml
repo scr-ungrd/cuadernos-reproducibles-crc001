@@ -83,4 +83,4 @@ site:
   actions:
     - title: Notebooks Now!
       url: https://data.agu.org/notebooks-now/
-  template: article-theme
+  template: https://github.com/myst-templates/article-theme/archive/4acce1eba558b301c2aadca99a7804aa6e294e1e.zip
