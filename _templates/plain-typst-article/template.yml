@@ -10,6 +10,7 @@ template: template.typ
 files:
   - template.typ
   - style.typ
+  - subpar-wrap.typ
 
 authors:
   - name: Subdirección para el Conocimiento del Riesgo (UNGRD)
@@ -24,6 +25,11 @@ doc:
     required: true
   - id: affiliations
   - id: doi
+  - id: keywords
+  - id: date
+  - id: license
+  - id: github
+  - id: open_access
   - id: bibliography
 
 options: []
