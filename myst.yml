@@ -76,6 +76,7 @@ site:
   title: Riesgo por calor urbano en Montería
   options:
     logo_text: "Montería: riesgo por calor"
+    outline_maxdepth: 2
   nav:
     - title: MyST Docs
       url: https://mystmd.org/guide
