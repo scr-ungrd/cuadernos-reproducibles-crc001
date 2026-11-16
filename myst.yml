@@ -39,6 +39,8 @@ project:
   date: 2026-11-15
   requirements:
     - environment.yml
+  toc:
+    - file: article.ipynb
   resources:
     - README.md
   bibliography:
