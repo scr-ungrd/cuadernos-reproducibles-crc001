@@ -1,7 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: Proyección de Temperatura en Montería, Córdoba bajo Escenarios de Cambio Climático
+  title: Riesgo por olas de calor urbano en Montería, Córdoba, bajo escenarios de cambio climático
   authors:
     - name: Subdirección para el Conocimiento del Riesgo
       affiliations:
@@ -27,21 +27,20 @@ project:
           doi: http://dx.doi.org/10.13039/100000879
   keywords:
     - Cambio climático
-    - Proyección de temperatura
+    - Olas de calor
+    - Isla de calor urbana
+    - Estrés térmico
+    - Riesgo por calor
     - Montería
     - Córdoba
     - Caribe colombiano
-    - Estrés térmico
-    - CLIMADA
     - Gestión del riesgo de desastres
   doi: 10.5281/zenodo.20061610
-  date: 2026-05-04
+  date: 2026-11-15
   requirements:
     - environment.yml
   resources:
     - README.md
-    - data/catalogoComunSV_1663233588717.csv
-    - data/lapalma_ign.csv
   bibliography:
     - references.bib
   banner: ./images/banner.png
@@ -57,8 +56,6 @@ project:
       output: meca.zip
     - format: jats
       article: article.ipynb
-      sub_articles:
-        - notebooks/data-screening-visualization.ipynb
     - format: pdf
       article: article.ipynb
       output: article-agu.pdf
@@ -74,9 +71,9 @@ project:
       id: article-pdf
   jupyter: false
 site:
-  title: Proyección Temperatura Cambio Climático Montería
+  title: Riesgo por calor urbano en Montería
   options:
-    logo_text: Montería proyección climática
+    logo_text: "Montería: riesgo por calor"
   nav:
     - title: MyST Docs
       url: https://mystmd.org/guide

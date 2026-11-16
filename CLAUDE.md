@@ -1,54 +1,41 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guía para Claude Code (claude.ai/code) en este repositorio.
 
-## Project
+## Proyecto
 
-A reproducible research publication on temperature projections for Montería, Córdoba (Caribbean coast of Colombia) under climate change scenarios (RCP 2.6/4.5/6.0/8.5), built with [MyST Markdown](https://mystmd.org/) and submitted to AGU's Notebooks Now! initiative. The output is a multi-format scientific article (HTML site, PDF via AGU LaTeX template, JATS, MECA). Uses the CLIMADA probabilistic risk platform (ETH Zurich) with pattern-scaling methodology, horizon 2024–2074.
+Cuaderno reproducible CRC001: riesgo por olas de calor urbano en Montería (Córdoba) bajo escenarios de cambio climático, con datos abiertos reales. Se escribe en MyST (`article.ipynb`) y se publica como sitio HTML y como PDF (plantilla Typst propia). Reúne la proyección climática, las olas de calor y el riesgo en un solo análisis, en seis fases (amenaza climática, isla de calor urbana, estrés térmico, exposición, vulnerabilidad parcial y riesgo relativo).
 
-## Environment Setup
-
-```bash
-conda env create -f environment.yml
-conda activate lapalma-earthquakes
-```
-
-The conda environment (`lapalma-earthquakes`) includes JupyterLab ≥4 with the `jupyterlab-myst` extension. The main analysis point is Montería (8.7479° N, 75.8814° W, 15 m a.s.l.), with T_base = 27.5 °C and regional amplification factor FAR = 1.05 (IPCC AR6 CAR domain).
-
-## Build Commands
+## Entorno
 
 ```bash
-# Install MyST CLI (one-time)
-npm install -g mystmd
-
-# Build HTML site for local preview
-myst build --html
-
-# Build all export formats (PDF, JATS, MECA, TeX, HTML)
-myst build --all
-
-# Start local dev server with live reload
-myst start
+conda env create -f environment.yml && conda activate crc001-calor-monteria
 ```
 
-CI builds via GitHub Actions (`.github/workflows/deploy.yml`) on push to `main` and deploys HTML to GitHub Pages.
+Usar `xclim<1`: la versión 1.0 retiró `xclim.indices`.
 
-## Architecture
+## Construcción
 
-The publication follows a linear execution pipeline:
+```bash
+myst build --html      # sitio
+myst build --typst     # PDF (article.pdf)
+```
 
-1. **`article.ipynb`** — Main scientific text (MyST markdown with frontmatter, as a Jupyter notebook). References figures produced by the notebooks using MyST cross-reference syntax (`{numref}`, `{cite}`).
+Requiere mystmd >= 1.13 y Node >= 22. El sitio fija la plantilla `article-theme` en la v1.4.1 (la v2 rompe el build con `BASE_URL`).
 
-2. **`notebooks/data-screening-visualization.ipynb`** — Three complementary analyses: (A) historical GMST context 1880–2100 with warming-rate trend, (B) FAR sensitivity analysis showing how regional amplification uncertainty propagates to projected temperatures, (C) Time of Emergence analysis determining when the warming signal robustly exceeds natural variability for each RCP.
+## Arquitectura
 
-`myst build` handles notebook execution via Jupyter when building.
+- `article.ipynb`: texto y código. Corre completo con los archivos de `data/`; `jupyter: false` en `myst.yml`, así que el sitio usa las salidas guardadas (hay que ejecutar el cuaderno y guardarlas antes del commit).
+- `scripts/`: descarga y procesamiento de datos; `scripts/config.py` fija la ciudad, la estación, el recuadro y las celdas de NEX-GDDP. La caché `data/raw/` no se versiona (en esta máquina es un enlace a `~/.cache/crc001/raw`).
+- `_templates/plain-typst-article/`: plantilla del PDF (`style.typ`, `template.typ`, `subpar-wrap.typ`). El identificador de la portada (CRC001) sale del nombre del repositorio en `myst.yml`.
 
-## Key Configuration
+## Convenciones del cuaderno
 
-- **`myst.yml`** — Project metadata, export targets (AGU 2019 LaTeX template), site navigation, and resource declarations. Authors, affiliations, and DOI/ORCID metadata live here.
-- **`_toc.yml`** — Chapter order for the built site.
-- **`references.bib`** — BibTeX bibliography; inline DOI citations in notebooks use MyST's `{cite}` role.
+- Cada bloque de código lleva antes un párrafo que lo presenta y termina con «(ver código en la versión web)»; las celdas de código llevan la etiqueta `hide-input` (se pliegan en la web y se ocultan en el PDF).
+- Toda tabla y figura se cita en el texto (`{numref}`) y tiene leyenda; las tablas de DataFrame se incrustan con una celda auxiliar `remove-cell` + `remove-input` dentro de `{table}`.
+- Los escenarios SSP nunca se promedian; SSP2-4.5 es el principal, SSP3-7.0 el intermedio y SSP5-8.5 la prueba de estrés.
+- Los datos crudos del IDEAM no se modifican: el control de calidad se hace en el cuaderno y se documenta.
 
-## Data
+## Datos
 
-`data/lapalma_ign.csv` is a legacy dataset from the original La Palma template (not used by `article.ipynb`). The main article generates all data synthetically via CLIMADA's GMST ensemble (`get_gmst_info()`). The analysis point is Montería, Córdoba (Colombia).
+Estaciones IDEAM (Aeropuerto Los Garzones 0013035501 y INCODER-AUT 0013055040), NEX-GDDP-CMIP6 (5 modelos, 3 escenarios), ERA5-Land (solo contraste), Landsat 8 y 9, ESA WorldCover, WorldPop y OpenStreetMap. Todo es abierto y no requiere credenciales.

@@ -1,18 +1,37 @@
-name: lapalma-earthquakes
+# =====================================================================
+# Entorno conda para Binder y ejecución local
+# Riesgo por olas de calor urbano · Montería (CRC001)
+# =====================================================================
+name: crc001-calor-monteria
+
 channels:
   - conda-forge
-  - defaults
+
 dependencies:
   - python=3.11
-  - numpy
-  - matplotlib
-  - pandas
-  - scipy
-  - seaborn
-  - altair
-  - plotly
-  - jupyterlab>=4.0.0
-  - jupyterlab-myst>=2.0.0
+
+  # Núcleo científico
+  - numpy>=1.26
+  - pandas>=2.1
+  - scipy>=1.11
+  - matplotlib>=3.8
+
+  # Datos geoespaciales y climáticos
+  - xarray>=2024.3
+  - netcdf4>=1.6.5
+  - rasterio>=1.3
+  - xclim>=0.49,<1       # verificación cruzada del conteo de olas de calor (la 1.0 retiró xclim.indices)
+
+  # Mapa interactivo
+  - folium>=0.16
+
+  # Cuadernos
+  - jupyterlab>=4.0
+  - ipykernel>=6.27
+
+  # Solo para regenerar los datos con scripts/ (no hace falta para ejecutar el cuaderno)
+  - requests>=2.31
   - pip
   - pip:
-    - climada
+    - pystac-client>=0.8
+    - planetary-computer>=1.0

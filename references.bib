@@ -1,90 +1,416 @@
+% ======================================================================
+% Riesgos · Olas de calor urbano · Cartagena
+% Bibliografía BibTeX para MyST/JATS
+% ======================================================================
+
+% ----- Marcos teóricos y plataformas -----
+
 @article{aznar2019climada,
-  author  = {Aznar-Sigu{\'a}n, Gabriela and Bresch, David N.},
-  title   = {{CLIMADA} v1: a global weather and climate risk assessment platform},
-  journal = {Geoscientific Model Development},
-  volume  = {12},
-  number  = {7},
-  pages   = {3085--3097},
-  year    = {2019},
-  doi     = {10.5194/gmd-12-3085-2019}
+  author    = {Aznar-Siguán, Gabriela and Bresch, David N.},
+  title     = {{CLIMADA} v1: a global weather and climate risk assessment platform},
+  journal   = {Geoscientific Model Development},
+  volume    = {12},
+  number    = {7},
+  pages     = {3085--3097},
+  year      = {2019},
+  doi       = {10.5194/gmd-12-3085-2019}
 }
 
-@misc{ideam2015,
-  author    = {{IDEAM}},
-  title     = {Nuevos escenarios de cambio clim{\'a}tico para {Colombia} 2011--2100},
-  year      = {2015},
-  publisher = {Instituto de Hidrolog{\'i}a, Meteorolog{\'i}a y Estudios Ambientales},
-  address   = {Bogot{\'a}, Colombia}
+@article{bourgault2023xclim,
+  author    = {Bourgault, Pascal and Huard, David and Smith, Travis Logan and others},
+  title     = {xclim: xarray-based climate data analytics},
+  journal   = {Journal of Open Source Software},
+  volume    = {8},
+  number    = {85},
+  pages     = {5415},
+  year      = {2023},
+  doi       = {10.21105/joss.05415}
 }
 
-@misc{ipcc2021ar6wg1,
-  author    = {{IPCC}},
-  title     = {Climate Change 2021: The Physical Science Basis. {Working Group I} to the Sixth Assessment Report},
+@article{stalhandske2022heat,
+  author    = {Stalhandske, Z. and Nesa, V. and Zumwald, M. and Ragettli, M. S.
+               and Galimshina, A. and Holthausen, N. and Röösli, M. and Bresch, D. N.},
+  title     = {Projected impact of heat on mortality and labour productivity
+               under climate change in Switzerland},
+  journal   = {Natural Hazards and Earth System Sciences},
+  volume    = {22},
+  pages     = {2531--2541},
+  year      = {2022},
+  doi       = {10.5194/nhess-22-2531-2022}
+}
+
+% ----- Datos climáticos -----
+
+@article{thrasher2022nex,
+  author    = {Thrasher, Bridget and Wang, Weile and Michaelis, Andrew and
+               Melton, Forrest and Lee, Tsengdar and Nemani, Ramakrishna},
+  title     = {{NASA} Global Daily Downscaled Projections, {CMIP6}},
+  journal   = {Scientific Data},
+  volume    = {9},
+  pages     = {262},
+  year      = {2022},
+  doi       = {10.1038/s41597-022-01393-4}
+}
+
+@article{jewson2021pattern,
+  author    = {Jewson, Stephen},
+  title     = {Conversion of the {Knutson} et al. (2020) tropical cyclone climate
+               change projections to risk model baselines},
+  journal   = {Journal of Applied Meteorology and Climatology},
+  volume    = {60},
+  number    = {10},
+  pages     = {1517--1530},
   year      = {2021},
-  publisher = {Cambridge University Press},
-  url       = {https://www.ipcc.ch/report/ar6/wg1/}
+  doi       = {10.1175/jamc-d-21-0102.1}
+}
+
+@article{tebaldi2014pattern,
+  author    = {Tebaldi, Claudia and Arblaster, Julie M.},
+  title     = {Pattern scaling: Its strengths and limitations, and an update
+               on the latest model simulations},
+  journal   = {Climatic Change},
+  volume    = {122},
+  pages     = {459--471},
+  year      = {2014},
+  doi       = {10.1007/s10584-013-1032-9}
+}
+
+@misc{ipcc2021ar6,
+  author       = {{IPCC}},
+  title        = {Climate Change 2021: The Physical Science Basis. Contribution
+                  of Working Group I to the Sixth Assessment Report of the
+                  Intergovernmental Panel on Climate Change},
+  year         = {2021},
+  publisher    = {Cambridge University Press},
+  url          = {https://www.ipcc.ch/report/ar6/wg1/},
+  howpublished = {\url{https://www.ipcc.ch/report/ar6/wg1/}}
 }
 
 @misc{ipcc2021atlas,
-  author = {{IPCC}},
-  title  = {Atlas Interactivo del {IPCC AR6} --- dominio {CAR} ({Caribbean})},
-  year   = {2021},
-  url    = {https://interactive-atlas.ipcc.ch/}
+  author       = {{IPCC}},
+  title        = {Atlas Interactivo del {IPCC AR6} — Regional Information},
+  year         = {2021},
+  url          = {https://interactive-atlas.ipcc.ch/},
+  howpublished = {\url{https://interactive-atlas.ipcc.ch/}}
 }
 
-@article{jewson2021,
-  author  = {Jewson, Stephen},
-  title   = {Conversion of the {Knutson} et al. (2020) Tropical Cyclone Climate Change Projections to Risk Model Baselines},
-  journal = {Journal of Applied Meteorology and Climatology},
-  volume  = {60},
-  number  = {10},
-  pages   = {1517--1530},
-  year    = {2021},
-  doi     = {10.1175/JAMC-D-21-0102.1}
+% ----- Earth Engine y Landsat -----
+
+@article{gorelick2017gee,
+  author    = {Gorelick, Noel and Hancher, Matt and Dixon, Mike and
+               Ilyushchenko, Simon and Thau, David and Moore, Rebecca},
+  title     = {Google Earth Engine: Planetary-scale geospatial analysis for everyone},
+  journal   = {Remote Sensing of Environment},
+  volume    = {202},
+  pages     = {18--27},
+  year      = {2017},
+  doi       = {10.1016/j.rse.2017.06.031}
 }
 
-@article{marengo2018,
-  author  = {Marengo, Jos{\'e} A. and Souza, Carlos M. and Thonicke, Kirsten and Burton, Chris and Halladay, Kate and Betts, Richard A. and Alves, Lincoln M. and Soares, Wagner R.},
-  title   = {Changes in Climate and Land Use Over the {Amazon} Region: Current and Future Variability and Trends},
-  journal = {Frontiers in Earth Science},
-  volume  = {6},
-  pages   = {228},
-  year    = {2018},
-  doi     = {10.3389/feart.2018.00228}
+@article{wulder2019landsat,
+  author    = {Wulder, Michael A. and Loveland, Thomas R. and Roy, David P. and
+               Crawford, Christopher J. and Masek, Jeffrey G. and Woodcock, Curtis E.
+               and others},
+  title     = {Current status of {Landsat} program, science, and applications},
+  journal   = {Remote Sensing of Environment},
+  volume    = {225},
+  pages     = {127--147},
+  year      = {2019},
+  doi       = {10.1016/j.rse.2019.02.015}
 }
 
-@article{nakaegawa2014,
-  author  = {Nakaegawa, Tosiyuki and Kitoh, Akio and Murakami, Hiroyuki and Kusunoki, Shoji},
-  title   = {Robust Changes of Precipitation Seasonality and Dry Spell Length in the {Caribbean} in the Late Twenty-First Century Projected by {CMIP3} and {CMIP5} Models},
-  journal = {Journal of Hydrometeorology},
-  volume  = {15},
-  number  = {3},
-  pages   = {853--870},
-  year    = {2014},
-  doi     = {10.1175/JHM-D-13-041.1}
+% ----- UHI y clima urbano tropical -----
+
+@article{sarricolea2010santiago,
+  author    = {Sarricolea, P. and Romero, H.},
+  title     = {Identificación de la isla de calor urbana en {Santiago} de
+               {Chile} mediante imágenes satelitales {Landsat ETM+}},
+  journal   = {Anales de la Sociedad Chilena de Ciencias Geográficas},
+  pages     = {163--168},
+  year      = {2010}
 }
 
-@article{tebaldi2014,
-  author  = {Tebaldi, Claudia and Arblaster, Julie M.},
-  title   = {Pattern scaling: Its strengths and limitations, and an update on the latest model simulations},
-  journal = {Climatic Change},
-  volume  = {122},
-  pages   = {459--471},
-  year    = {2014},
-  doi     = {10.1007/s10584-013-1032-9}
+@article{mendelsohn2007uhi,
+  author    = {Mendelsohn, Robert and Kurukulasuriya, Pradeep and Basist, Alan
+               and Kogan, Felix and Williams, Claudia},
+  title     = {Climate analysis with satellite versus weather station data},
+  journal   = {Climatic Change},
+  volume    = {81},
+  pages     = {71--83},
+  year      = {2007},
+  doi       = {10.1007/s10584-006-9139-x}
+}
+
+@article{stewart2012lcz,
+  author    = {Stewart, Iain D. and Oke, T. R.},
+  title     = {Local Climate Zones for urban temperature studies},
+  journal   = {Bulletin of the American Meteorological Society},
+  volume    = {93},
+  number    = {12},
+  pages     = {1879--1900},
+  year      = {2012},
+  doi       = {10.1175/BAMS-D-11-00019.1}
+}
+
+% ----- Contexto Colombia -----
+
+@misc{ideam2015escenarios,
+  author       = {{IDEAM}},
+  title        = {Nuevos escenarios de cambio climático para {Colombia} 2011--2100},
+  year         = {2015},
+  publisher    = {Instituto de Hidrología, Meteorología y Estudios Ambientales},
+  address      = {Bogotá, Colombia},
+  url          = {http://www.cambioclimatico.gov.co/}
 }
 
 @misc{ungrd2016pngrd,
-  author    = {{UNGRD}},
-  title     = {Plan Nacional de Gesti{\'o}n del Riesgo de Desastres 2015--2030},
-  year      = {2016},
-  publisher = {Unidad Nacional para la Gesti{\'o}n del Riesgo de Desastres},
-  address   = {Bogot{\'a}, Colombia}
+  author       = {{UNGRD}},
+  title        = {Plan Nacional de Gestión del Riesgo de Desastres 2015--2030},
+  year         = {2016},
+  publisher    = {Unidad Nacional para la Gestión del Riesgo de Desastres},
+  address      = {Bogotá, Colombia},
+  url          = {https://repositorio.gestiondelriesgo.gov.co/handle/20.500.11762/756}
+}
+
+@misc{ley1523_2012,
+  author       = {{Congreso de la República de Colombia}},
+  title        = {Ley 1523 de 2012, por la cual se adopta la Política Nacional
+                  de Gestión del Riesgo de Desastres y se establece el
+                  {Sistema Nacional de Gestión del Riesgo de Desastres}},
+  year         = {2012}
 }
 
 @misc{undrr2015sendai,
-  author    = {{UNDRR}},
-  title     = {Marco de {Sendai} para la Reducci{\'o}n del Riesgo de Desastres 2015--2030},
-  year      = {2015},
-  publisher = {United Nations Office for Disaster Risk Reduction}
+  author       = {{UNDRR}},
+  title        = {Sendai Framework for Disaster Risk Reduction 2015--2030},
+  year         = {2015},
+  publisher    = {United Nations Office for Disaster Risk Reduction},
+  url          = {https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030}
+}
+
+% ----- CLIMAAX -----
+
+@misc{climaax2026handbook,
+  author       = {{CLIMAAX Consortium}},
+  title        = {{CLIMAAX} Climate Risk Assessment Handbook --- Urban heatwaves workflow},
+  year         = {2026},
+  url          = {https://handbook.climaax.eu/notebooks/workflows/HEATWAVES/01_Urban_heatwaves/heatwave_intro.html}
+}
+
+% ----- Versión anterior de este cuaderno (archivada en Zenodo) -----
+
+@misc{romero2026monteria,
+  author       = {Romero, Mauricio and Santizo, Moises},
+  title        = {Proyección de Temperatura en {Montería}, {Córdoba} bajo
+                  Escenarios de Cambio Climático --- Análisis probabilístico
+                  con {CLIMADA}},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.20061610},
+  url          = {https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/}
+}
+
+% ====== Copiadas del libro de teoría (mismas claves) ======
+@misc{ley1523,
+  author = {{Congreso de la República de Colombia}},
+  title  = {Ley 1523 de 2012, por la cual se adopta la política nacional de gestión del riesgo de desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres},
+  year   = {2012}
+}
+
+@book{ungrd2019atlas,
+  author    = {{Unidad Nacional para la Gestión del Riesgo de Desastres}},
+  title     = {Atlas de Riesgo de Colombia: revelando los desastres latentes},
+  year      = {2019},
+  address   = {Bogotá, D.C.},
+  publisher = {UNGRD},
+  note      = {Coordinación: M. C. Marulanda Fraume; evaluación probabilista: Ingeniar Risk Intelligence}
+}
+
+@misc{climaax2025handbook,
+  author = {{CLIMAAX Consortium}},
+  title  = {CLIMAAX CRA Handbook},
+  year   = {2025},
+  url    = {https://handbook.climaax.eu/},
+  note   = {Consultado el 2026-11-01}
+}
+
+@misc{ccdr2025tools,
+  author = {{GFDRR and World Bank}},
+  title  = {Risk Data Library: Country Climate and Disaster Risk Screening Tools (CCDR-tools)},
+  year   = {2025},
+  url    = {https://gfdrr.github.io/CCDR-tools/home.html},
+  note   = {Consultado el 2026-11-01}
+}
+
+@misc{undrr2025hips,
+  author       = {{UNDRR} and {ISC}},
+  title        = {2025 Hazard Information Profiles (HIPs) online reference},
+  howpublished = {PreventionWeb, DRR glossary},
+  year         = {2025},
+  url          = {https://www.preventionweb.net/drr-glossary/hips},
+  note         = {Perfiles de información de peligros del UNDRR y el Consejo Internacional de Ciencias, licencia CC BY 4.0. Datos consultados por la API pública el 2 de noviembre de 2026}
+}
+
+@article{salazarceballos2025sistema,
+  title = {Sistema de alerta temprana para altas temperaturas y olas de calor: la necesidad de una política de salud pública en Colombia},
+  author = {Salazar-Ceballos, Alexander and Álvarez-Miño, Lídice},
+  journal = {Biomédica},
+  year = {2025},
+  doi = {10.7705/biomedica.7934},
+  volume = {45},
+  number = {Sp. 2},
+  pages = {7-16}
+}
+
+@article{bustos2024observation,
+  author  = {Bustos Usta, David Francisco and Torres Parra, Rafael Ricardo and Rodríguez-López, Lien and Castillo Alvarez, Maibelin and Bourrel, Luc},
+  title   = {Observation and Projection of Marine Heatwaves in the Caribbean Sea from CMIP6 Models},
+  journal = {Remote Sensing},
+  year    = {2024},
+  volume  = {16},
+  number  = {13},
+  pages   = {2357},
+  doi     = {10.3390/rs16132357}
+}
+
+@article{giraldocharria2025urban,
+  title = {Urban forests mitigate extreme heat exposure in a vulnerable tropical city},
+  author = {Giraldo-Charria, Diana Lucia and Escobedo, Francisco J. and Clerici, Nicola and Quesada, Benjamin},
+  journal = {Urban Climate},
+  year = {2025},
+  doi = {10.1016/j.uclim.2025.102311},
+  volume = {59},
+  pages = {102311}
+}
+
+@article{rivera20232022,
+  title = {2022 early-summer heatwave in Southern South America: 60 times more likely due to climate change},
+  author = {Rivera, Juan Antonio and Arias, Paola A. and Sörensson, Anna A. and Zachariah, Mariam and Barnes, Clair and Philip, Sjoukje and Kew, Sarah and Vautard, Robert and Koren, Gerbrand and Pinto, Izidine and Vahlberg, Maja and Singh, Roop and Raju, Emmanuel and Li, Sihan and Yang, Wenchang and Vecchi, Gabriel A. and Harrington, Luke J. and Otto, Friederike E. L.},
+  journal = {Climatic Change},
+  year = {2023},
+  doi = {10.1007/s10584-023-03576-3},
+  volume = {176},
+  number = {8}
+}
+
+@article{arias2025compound,
+  title = {Compound dry and hot extremes and their implications for fire activity over the Orinoco River Basin in northern South America},
+  author = {Arias, Paola A. and Fernández-Berrío, Alejandra and Bedoya-Pineda, Valeria and Acevedo-Ortiz, M. Yurani and Martínez, J. Alejandro},
+  journal = {Climate Dynamics},
+  year = {2025},
+  doi = {10.1007/s00382-025-07660-5},
+  volume = {63},
+  number = {4}
+}
+
+@article{perezarevalo2025impacts,
+  author  = {Pérez-Arévalo, Raúl and Jiménez-Caldera, Juan E. and Serrano-Montes, José Luis and Rodrigo-Comino, Jesús and Ortiz Royero, Juan Carlos and Caballero-Calvo, Andrés},
+  title   = {Impacts of Urban Morphology on Micrometeorological Parameters and Cyclonic Phenomena in Northern Colombian Caribbean},
+  journal = {Climate},
+  year    = {2025},
+  volume  = {13},
+  number  = {5},
+  pages   = {87},
+  doi     = {10.3390/cli13050087}
+}
+
+@article{riahi2017ssp,
+  author  = {Riahi, K. and van Vuuren, D. P. and Kriegler, E. and Edmonds, J. and O'Neill, B. C. and Fujimori, S. and others},
+  title   = {The Shared Socioeconomic Pathways and their energy, land use, and greenhouse gas emissions implications: An overview},
+  journal = {Global Environmental Change},
+  year    = {2017},
+  volume  = {42},
+  pages   = {153--168},
+  doi     = {10.1016/j.gloenvcha.2016.05.009}
+}
+
+% ====== Añadidas en la versión 2 (fuentes leídas en el RAG-GRD y datos abiertos usados) ======
+@article{cantillo2024historical,
+  author  = {Esteban-Cantillo, Oscar Julian and Clerici, Nicola and Avila-Diaz, Alvaro and Quesada, Benjamin},
+  title   = {Historical and future extreme climate events in highly vulnerable small Caribbean Islands},
+  journal = {Climate Dynamics},
+  year    = {2024},
+  volume  = {62},
+  pages   = {7233--7250},
+  doi     = {10.1007/s00382-024-07276-1}
+}
+
+@article{avila2023current,
+  author  = {Avila-Diaz, Alvaro and Torres, Roger Rodrigues and Zuluaga, Cristian Felipe and Cer{\'o}n, Wilmar L. and Oliveira, Lais and Benezoli, Victor and Rivera, Irma Ayes and Marengo, Jose Antonio and Wilson, Aaron B. and Medeiros, Felipe},
+  title   = {Current and Future Climate Extremes Over {Latin America} and {Caribbean}: Assessing Earth System Models from High Resolution Model Intercomparison Project ({HighResMIP})},
+  journal = {Earth Systems and Environment},
+  year    = {2023},
+  volume  = {7},
+  pages   = {99--130},
+  doi     = {10.1007/s41748-022-00337-7}
+}
+
+@article{arias2022tercera,
+  author  = {Arias, Paola A. and Villegas, Laura D. and Mesa, Oscar J. and others},
+  title   = {Implicaciones metodol{\'o}gicas e inconsistencias de la Tercera Comunicaci{\'o}n Nacional sobre Cambio Clim{\'a}tico de Colombia},
+  journal = {Revista de la Academia Colombiana de Ciencias Exactas, F{\'i}sicas y Naturales},
+  year    = {2022},
+  volume  = {46},
+  number  = {180},
+  pages   = {769--794},
+  doi     = {10.18257/raccefyn.1705}
+}
+
+@article{bubeck2025mortality,
+  author  = {Bubeck, Philip and Ozturk, Ugur and Aristizabal, Edier and Thieken, Annegret H. and Wagener, Thorsten},
+  title   = {Mortality reduction despite changing climate extremes requires better understanding of human behavioral response to warnings},
+  journal = {Environmental Research Letters},
+  year    = {2025},
+  volume  = {20},
+  pages   = {101004},
+  doi     = {10.1088/1748-9326/ae034f}
+}
+
+@article{munoz2021era5land,
+  author  = {Mu{\~n}oz-Sabater, Joaqu{\'i}n and Dutra, Emanuel and Agust{\'i}-Panareda, Anna and others},
+  title   = {{ERA5-Land}: a state-of-the-art global reanalysis dataset for land applications},
+  journal = {Earth System Science Data},
+  year    = {2021},
+  volume  = {13},
+  pages   = {4349--4383},
+  doi     = {10.5194/essd-13-4349-2021}
+}
+
+@misc{zippenfenig2023openmeteo,
+  author = {Zippenfenig, Patrick},
+  title  = {Open-Meteo.com Weather {API}},
+  year   = {2023},
+  doi    = {10.5281/zenodo.7970649},
+  note   = {Software y servicio de datos; se usó para obtener series diarias de ERA5-Land}
+}
+
+@misc{zanaga2022worldcover,
+  author = {Zanaga, Daniele and Van De Kerchove, Ruben and Daems, Dirk and others},
+  title  = {{ESA WorldCover} 10 m 2021 v200},
+  year   = {2022},
+  doi    = {10.5281/zenodo.7254221}
+}
+
+@misc{worldpop2020,
+  author = {{WorldPop}},
+  title  = {Poblaci{\'o}n y estructuras de edad y sexo de Colombia 2020 (100 m, no restringida)},
+  year   = {2020},
+  url    = {https://www.worldpop.org/},
+  note   = {School of Geography and Environmental Science, University of Southampton. Descargado de data.worldpop.org}
+}
+
+@misc{ideam2026temperaturas,
+  author = {{IDEAM}},
+  title  = {Temperatura m{\'a}xima del aire (ccvq-rp9s) y temperatura m{\'i}nima del aire (afdg-3zpb), estaci{\'o}n Aeropuerto Rafael N{\'u}{\~n}ez},
+  year   = {2026},
+  url    = {https://www.datos.gov.co/},
+  note   = {Datos abiertos de Colombia. Consultado el 2026-11-02}
+}
+
+@techreport{masterton1979humidex,
+  author      = {Masterton, J. M. and Richardson, F. A.},
+  title       = {Humidex: a method of quantifying human discomfort due to excessive heat and humidity},
+  institution = {Atmospheric Environment Service, Environment Canada},
+  number      = {CLI 1-79},
+  year        = {1979}
 }

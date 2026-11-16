@@ -1,4 +1,4 @@
-# Proyección de Temperatura en Montería, Córdoba bajo Escenarios de Cambio Climático
+# CRC001: riesgo por olas de calor urbano en Montería, Córdoba, bajo escenarios de cambio climático
 
 [![Made with MyST](https://img.shields.io/badge/made%20with-MyST-orange)](https://mystmd.org)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc001/main?filepath=article.ipynb)
@@ -6,104 +6,68 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20061610.svg)](https://doi.org/10.5281/zenodo.20061610)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-> **Publicación Científica Reproducible**  
-> **Subdirección para el Conocimiento del Riesgo (SCR)** — Unidad Nacional para la Gestión del Riesgo de Desastres (**UNGRD**), Colombia.  
-> *Sometido a la iniciativa Notebooks Now! de la AGU (American Geophysical Union).*
+> **Cuaderno reproducible de conocimiento del riesgo.**
+> Subdirección para el Conocimiento del Riesgo (SCR), Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD), Colombia.
+> *Sometido a la iniciativa Notebooks Now! de la AGU.*
 
----
+- **Sitio:** <https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/>
+- **Cuaderno:** [`article.ipynb`](article.ipynb), con las salidas guardadas.
+- **Libro de referencia:** [Teoría y métodos de análisis de riesgos](https://mromerot.github.io/teoria-riesgos/).
 
-## 📌 Resumen del Proyecto
+## Qué hace
 
-Este repositorio contiene la publicación científica reproducible sobre la **proyección probabilística de temperatura media anual en Montería, Córdoba (Caribe colombiano)** para el periodo **2024–2074** bajo cuatro trayectorias representativas de concentración (**RCP 2.6, 4.5, 6.0 y 8.5**).
+Evalúa cómo cambia el riesgo por calor urbano en **Montería** con datos abiertos reales y tres escenarios del CMIP6 (SSP2-4.5, SSP3-7.0 y SSP5-8.5). Este cuaderno reúne, en un solo análisis, la proyección del cambio climático, las olas de calor y el riesgo. Recorre seis fases:
 
-La metodología implementa la técnica de escalamiento por patrón de calentamiento (*pattern scaling*) sobre la plataforma de riesgo probabilístico **CLIMADA** (ETH Zurich), utilizando el ensamble de temperatura media global (GMST) consistente con CMIP5 (Jewson, 2021) y aplicando un factor de amplificación regional ($FAR = 1.05 \pm 0.10$) específico para el dominio Caribe (IPCC AR6).
+1. **Amenaza climática:** estaciones del IDEAM (Aeropuerto Los Garzones e INCODER-AUT) y proyecciones NEX-GDDP-CMIP6 de cinco modelos; olas de calor por percentil local.
+2. **Isla de calor urbana:** temperatura de superficie Landsat 8 y 9 a 30 m y cobertura ESA WorldCover.
+3. **Estrés térmico:** Humidex observado con temperatura y humedad relativa de la estación.
+4. **Exposición:** población WorldPop (100 m) e infraestructura de salud de OpenStreetMap.
+5. **Vulnerabilidad (parcial):** arbolado y distancia a hospitales y clínicas; faltan edad y condiciones sociales.
+6. **Riesgo relativo:** combina las fases 2, 4 y 5; ordena zonas y no estima pérdidas.
 
----
+El alcance y las limitaciones de cada fase están en las secciones 1 y 12 del cuaderno.
 
-## 🔑 Puntos Clave (*Key Points*)
+## Estructura
 
-1. **Calentamiento robusto bajo todos los escenarios:** Incluso bajo mitigación agresiva (RCP 2.6), la temperatura mediana asciende a 28.2 °C en 2074 (+0.7 °C sobre la línea base 1991–2020). Bajo RCP 8.5, supera los 30.2 °C (+2.7 °C).
-2. **Altas temperaturas en RCP 8.5:** Bajo el escenario de altas emisiones, la temperatura mediana sobrepasa los 30 °C hacia el año 2074 en Montería.
-3. **Aumento drástico de años cálidos extremos:** La frecuencia esperada de años que superan el percentil 95 climatológico (~28.8 °C) pasa del 5 % histórico a más del 90 % hacia 2070 en RCP 8.5.
-4. **Divergencia post-2050:** Las trayectorias climáticas se separan marcadamente después de 2045, definiendo las próximas dos décadas como la ventana estratégica decisiva para la mitigación.
-5. **Impactos multisectoriales en la GRD:** El calentamiento proyectado genera presiones críticas sobre la seguridad hídrica del río Sinú, la salud pública por estrés térmico sostenido y la productividad agropecuaria y ganadera de Córdoba.
+| Ruta | Contenido |
+|---|---|
+| `article.ipynb` | Cuaderno principal (corre completo sin credenciales con los datos de `data/`) |
+| `data/` | Series y rásteres recortados al área de estudio (unos 25 MB); `data/final/` guarda figuras y tablas |
+| `scripts/` | Descarga y procesamiento desde las fuentes originales; `scripts/config.py` fija la ciudad |
+| `references.bib` | Bibliografía |
+| `_templates/plain-typst-article/` | Plantilla Typst del PDF |
+| `myst.yml`, `.github/workflows/deploy.yml` | Sitio MyST y publicación en GitHub Pages |
 
----
+## Ejecutar
 
-## 🏷️ Palabras Clave (*Keywords*)
-
-`Cambio climático` • `Proyección de temperatura` • `Montería` • `Córdoba` • `Caribe colombiano` • `Estrés térmico` • `CLIMADA` • `Gestión del riesgo de desastres`
-
----
-
-## 📂 Estructura del Repositorio
-
-```text
-cuadernos-reproducibles-crc001/
-├── article.ipynb                   # Cuaderno principal y manuscrito científico MyST
-├── myst.yml                        # Configuración de metadatos, autores y exportaciones MyST
-├── _toc.yml                        # Tabla de contenido para el sitio web
-├── environment.yml                 # Especificación del entorno Conda
-├── references.bib                  # Citas bibliográficas en formato BibTeX
-├── notebooks/
-│   └── data-screening-visualization.ipynb  # Análisis complementarios (GMST, FAR, ToE)
-├── data/                           # Conjuntos de datos y catálogos de soporte
-├── images/                         # Recursos gráficos y banners
-├── _templates/                     # Plantillas Typst / LaTeX para generación de PDF
-└── fig1_trayectorias.png ...       # Gráficos generados por los cuadernos
+```bash
+conda env create -f environment.yml
+conda activate crc001-calor-monteria
+jupyter lab article.ipynb
 ```
 
----
+El cuaderno corre completo y sin credenciales con los archivos de `data/`. Para regenerarlos desde las fuentes abiertas (la caché de descargas, `data/raw/`, no se versiona):
 
-## 🚀 Ejecución e Instalación
+```bash
+python scripts/descargar_observaciones.py      # IDEAM, Humidex y ERA5-Land
+python scripts/extraer_nex_gddp.py             # NEX-GDDP-CMIP6 por OPeNDAP (tarda alrededor de una hora)
+python scripts/procesar_nex.py                 # celda de la estación e índices de la ventana 3 por 3
+python scripts/extraer_lst_landsat.py          # compuesto de LST de Landsat 8 y 9
+python scripts/extraer_worldcover.py           # cobertura del suelo
+python scripts/extraer_poblacion_worldpop.py   # población
+python scripts/extraer_osm.py                  # hospitales, clínicas, hogares de mayores y colegios
+```
 
-### Opción 1: Ejecución en la Nube (Recomendado)
-- **Google Colab:** Abrir [`article.ipynb` en Colab](https://colab.research.google.com/github/scr-ungrd/cuadernos-reproducibles-crc001/blob/main/article.ipynb) (Runtime CPU). La instalación inicial de CLIMADA requiere ~5–8 min.
-- **MyBinder:** Ejecutar el entorno completo interactivo a través de [Binder](https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc001/main?filepath=article.ipynb).
+`scripts/extraer_nex_gddp.py` y `scripts/descargar_observaciones.py` hacen reintentos, y el primero fuerza IPv4 porque el servidor THREDDS de la NASA no responde por IPv6.
 
-### Opción 2: Entorno Local (Conda + MyST CLI)
+## Cómo construir el sitio y el PDF
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/scr-ungrd/cuadernos-reproducibles-crc001.git
-   cd cuadernos-reproducibles-crc001
-   ```
+```bash
+npm install -g mystmd
+myst build --html      # sitio
+myst build --typst     # PDF con la plantilla Typst (requiere Typst y la fuente Liberation Sans)
+```
 
-2. **Crear y activar el entorno virtual:**
-   ```bash
-   conda env create -f environment.yml
-   conda activate lapalma-earthquakes
-   ```
+## Licencia
 
-3. **Instalar MyST CLI (Node.js requerida):**
-   ```bash
-   npm install -g mystmd
-   ```
-
----
-
-## 🛠️ Comandos de Compilación (MyST Markdown)
-
-- **Previsualizar sitio web localmente con live-reload:**
-  ```bash
-  myst start
-  ```
-
-- **Compilar únicamente el sitio HTML:**
-  ```bash
-  myst build --html
-  ```
-
-- **Compilar todas las exportaciones (PDF vía AGU LaTeX/Typst, JATS, MECA, HTML):**
-  ```bash
-  myst build --all
-  ```
-
----
-
-## 📄 Cita y Licencia
-
-- **Soporte financiero:** Financiado por la *Alfred P. Sloan Foundation* a través de la iniciativa **Notebooks Now!** de la AGU.
-- **Licencia del Contenido:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
-- **Licencia del Código:** [MIT License](LICENSE)
-- **DOI:** [10.5281/zenodo.20061610](https://doi.org/10.5281/zenodo.20061610)
+Texto y figuras bajo CC BY-SA 4.0; código bajo licencia MIT. Las fuentes de datos conservan sus propias licencias (IDEAM, NASA, ESA, WorldPop y © colaboradores de OpenStreetMap, ODbL).

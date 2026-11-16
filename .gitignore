@@ -4,3 +4,6 @@ _build/
 __pycache__/
 .jupyter_cache/
 .venv/
+
+# Cachés de descarga (se regeneran con scripts/)
+data/raw
