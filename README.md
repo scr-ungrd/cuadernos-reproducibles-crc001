@@ -12,7 +12,6 @@
 
 - **Sitio:** <https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/>
 - **Cuaderno:** [`article.ipynb`](article.ipynb), con las salidas guardadas.
-- **Libro de referencia:** [Teoría y métodos de análisis de riesgos](https://mromerot.github.io/teoria-riesgos/).
 
 ## Qué hace
 
