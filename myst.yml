@@ -41,6 +41,10 @@ project:
     - environment.yml
   toc:
     - file: article.ipynb
+    - file: DATA_STATEMENT.md
+    - file: metadata/DATA_DICTIONARY.md
+    - file: AI_USE.md
+    - file: CHANGELOG.md
   resources:
     - README.md
   bibliography:
