@@ -70,7 +70,7 @@ myst build --typst     # PDF con la plantilla Typst (requiere Typst y la fuente 
 
 ## Licencia
 
-Texto y figuras bajo CC BY-SA 4.0; código bajo licencia MIT. Los datos de `data/` conservan la licencia de su fuente, indicada por archivo en [`metadata/data_catalog.csv`](metadata/data_catalog.csv):
+Texto y figuras bajo CC BY-SA 4.0 ([`LICENSE-CC-BY-SA-4.0`](LICENSE-CC-BY-SA-4.0)); código bajo licencia MIT ([`LICENSE`](LICENSE)). Los datos de `data/` conservan la licencia de su fuente, indicada por archivo en [`metadata/data_catalog.csv`](metadata/data_catalog.csv):
 
 | Datos | Licencia |
 |---|---|

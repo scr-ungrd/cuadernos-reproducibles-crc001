@@ -23,6 +23,8 @@ Los usos se reconstruyen a partir del historial de git; cada fila agrupa los com
 |---|---|---|---|---|---|
 | 2026-05-03 a 2026-06-29 | Claude Sonnet 4.6 | 14 | `article.ipynb`, `myst.yml`, `references.bib`, `environment.yml`, flujos de CI, imágenes, `CLAUDE.md` | ámbar | <completar> |
 | 2026-07-11 | Claude Sonnet 5 | 3 | plantilla Typst, flujos de CI, `article.ipynb`, `myst.yml` | verde a ámbar | <completar> |
-| 2026-11-15 a 2026-11-16 | Claude Sonnet 5.5 | 11 | `article.ipynb`, `scripts/`, `data/`, plantilla Typst, `myst.yml`, `README.md`, `references.bib`, `CLAUDE.md` | ámbar | <completar> |
+| 2026-11-15 a 2026-11-17 | Claude Sonnet 5.5 | 11 | `article.ipynb`, `scripts/`, `data/`, plantilla Typst, `myst.yml`, `README.md`, `references.bib`, `CLAUDE.md` | ámbar | <completar> |
+
+**Usos del 2026-11-17 aún sin commit con rastro de IA en esa fecha.** Ese día Claude Code (Sonnet 5.5) redactó `MODEL_CARD.md`, escribió `scripts/validar_modelos.py` (sesgo de los modelos contra dos estaciones e hindcast del anclaje) y `scripts/probar_datos.py`, fijó las versiones de `environment.yml` tras una ejecución limpia y completó los vacíos de `metadata/sources.csv`. Es uso ámbar (código y texto de análisis). Las cifras de `metadata/validacion_modelos.md` salen del script a partir de `data/`; una persona debe verificarlas.
 
 La categoría de riesgo sigue la clasificación de la sección «Uso de IA»: el código y el texto generados con asistencia son ámbar y exigen verificación humana y declaración.

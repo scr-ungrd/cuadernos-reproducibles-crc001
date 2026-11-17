@@ -49,6 +49,10 @@ Ninguno.
 - Limitaciones introducidas por el análisis y heredadas de las fuentes: sección 12.1 del cuaderno.
 - Este cuaderno es un ejercicio sin validar por una persona experta; no debe usarse para tomar decisiones (aviso al inicio del cuaderno).
 
+## Actualización
+
+Los datos de esta versión son una versión final: no se prevén actualizaciones, salvo correcciones, y cada una genera una versión nueva con su DOI. Las fuentes de actualización continua (ERA5-Land, Landsat, OpenStreetMap y las series del IDEAM) se consultaron en las fechas de `metadata/sources.csv`.
+
 ## Compromiso de preservación
 
 - Responsable: Subdirección para el Conocimiento del Riesgo, UNGRD (conocimiento@gestiondelriesgo.gov.co).
