@@ -40,6 +40,8 @@ project:
   toc:
     - file: article.ipynb
     - file: DATA_STATEMENT.md
+    - file: MODEL_CARD.md
+    - file: metadata/validacion_modelos.md
     - file: metadata/DATA_DICTIONARY.md
     - file: AI_USE.md
     - file: CHANGELOG.md
