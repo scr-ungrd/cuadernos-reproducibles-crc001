@@ -6,11 +6,11 @@ Registro de uso de IA de este repositorio, conforme a la sección «Uso de IA» 
 
 El desarrollo de este cuaderno contó con la asistencia de modelos de IA de la familia Claude (Anthropic): Claude Sonnet 4.6, Claude Sonnet 5 y Claude Sonnet 5.5. El historial de git lo registra con la línea `Co-Authored-By` en 28 de 33 commits. Las instrucciones permanentes para el asistente están en [`CLAUDE.md`](CLAUDE.md).
 
-- **Herramienta y versión:** Claude Sonnet 4.6, Claude Sonnet 5 y Claude Sonnet 5.5. <confirmar si se usó Claude Code u otra interfaz>
-- **Fechas de uso:** del 2026-05-03 al 2026-11-16.
-- **Para qué se usó:** el historial muestra cambios asistidos en el texto y el código del cuaderno, los scripts de descarga y procesamiento, la plantilla Typst del PDF, los flujos de integración continua y la configuración del sitio. <confirmar el alcance real de cada uso>
-- **Revisión humana:** Mauricio Romero Torres ([ORCID 0000-0003-3282-0372](https://orcid.org/0000-0003-3282-0372)) revisó el cuaderno. <confirmar: fecha de la ejecución en un entorno limpio>.
-- **Datos enviados a la herramienta:** <confirmar: ninguno que no sea público>. Los datos del repositorio son públicos y no contienen datos personales.
+- **Herramienta y versión:** Claude Sonnet 4.6, Claude Sonnet 5 y Claude Sonnet 5.5. Todas las sesiones se hicieron con Claude Code (interfaz de línea de comandos de Anthropic).
+- **Fechas de uso:** del 2026-05-03 al 2026-11-17.
+- **Para qué se usó:** el historial muestra cambios asistidos en el texto y el código del cuaderno, los scripts de descarga y procesamiento, la plantilla Typst del PDF, los flujos de integración continua y la configuración del sitio. Mauricio Romero Torres dirigió cada cambio y aprobó los resultados.
+- **Revisión humana:** Mauricio Romero Torres ([ORCID 0000-0003-3282-0372](https://orcid.org/0000-0003-3282-0372)) revisó el cuaderno. La versión 2.0.0 se revisó y se publicó el 2026-11-16.
+- **Datos enviados a la herramienta:** ninguno que no sea público. Los datos del repositorio son públicos y no contienen datos personales.
 - **Prompts y salidas:** no se conservan los prompts de las sesiones; las instrucciones permanentes están en `CLAUDE.md`.
 
 El cuaderno incluye un aviso de que no ha sido validado por una persona experta y de que no debe usarse para tomar decisiones.
