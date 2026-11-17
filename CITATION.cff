@@ -6,7 +6,7 @@ authors:
   - name: "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)"
   - family-names: "Romero Torres"
     given-names: "Mauricio"
-    # orcid: "https://orcid.org/<completar>"
+    orcid: "https://orcid.org/0000-0003-3282-0372"
 repository-code: "https://github.com/scr-ungrd/cuadernos-reproducibles-crc001"
 url: "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
 doi: "10.5281/zenodo.20061609"

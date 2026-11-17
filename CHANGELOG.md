@@ -14,6 +14,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 - El cuaderno se reescribió con datos reales de seis fases (commit `d3993d5`, 2026-11-15): estaciones del IDEAM, NEX-GDDP-CMIP6, Landsat, WorldCover, WorldPop y OpenStreetMap.
 
 ### Corregido
+- ORCID de Mauricio Romero Torres en `CITATION.cff`.
 - Licencia de ERA5-Land: Copernicus pasó a CC BY 4.0 el 2025-07-02; se aclaró que la restricción de uso no comercial es de la API de Open-Meteo, no de los datos.
 
 ### Pendiente
