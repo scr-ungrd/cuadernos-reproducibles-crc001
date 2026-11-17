@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Si usa este cuaderno, cítelo con los metadatos de este archivo."
+message: "Si usa este cuaderno, cítelo con los metadatos de este archivo. Texto y figuras: CC BY-SA 4.0; código: MIT (véase LICENSE)."
 type: software
 title: "CRC001: riesgo por olas de calor urbano en Montería, Córdoba, bajo escenarios de cambio climático"
 authors:
@@ -12,9 +12,7 @@ url: "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
 version: "2.0.0"
 date-released: "2026-11-16"
 doi: "10.5281/zenodo.20061609"
-license:
-  - MIT
-  - CC-BY-SA-4.0
+license: CC-BY-SA-4.0
 keywords:
   - cambio climático
   - olas de calor
