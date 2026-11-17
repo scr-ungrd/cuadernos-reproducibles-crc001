@@ -1,6 +1,7 @@
 # =====================================================================
-# Entorno conda para Binder y ejecución local
-# Riesgo por olas de calor urbano · Montería (CRC001)
+# Entorno para Binder y ejecución local · Riesgo por olas de calor urbano · Montería (CRC001)
+# Verificado el 2026-11-17: ejecución completa de article.ipynb en un clon limpio, con Python 3.11 y estas versiones
+# exactas, en 79 s (Apple M1, CPU). Los resultados coinciden con los publicados.
 # =====================================================================
 name: crc001-calor-monteria
 
@@ -9,29 +10,23 @@ channels:
 
 dependencies:
   - python=3.11
-
-  # Núcleo científico
-  - numpy>=1.26
-  - pandas>=2.1
-  - scipy>=1.11
-  - matplotlib>=3.8
-
-  # Datos geoespaciales y climáticos
-  - xarray>=2024.3
-  - netcdf4>=1.6.5
-  - rasterio>=1.3
-  - xclim>=0.49,<1       # verificación cruzada del conteo de olas de calor (la 1.0 retiró xclim.indices)
-
-  # Mapa interactivo
-  - folium>=0.16
-
-  # Cuadernos
-  - jupyterlab>=4.0
-  - ipykernel>=6.27
-
-  # Solo para regenerar los datos con scripts/ (no hace falta para ejecutar el cuaderno)
-  - requests>=2.31
   - pip
   - pip:
+    # Núcleo científico, datos y cuaderno (versiones exactas verificadas)
+    - numpy==2.4.6
+    - pandas==3.1.1
+    - scipy==1.17.1
+    - matplotlib==3.11.2
+    - pillow==13.0.0
+    - xarray==2026.9.0
+    - netcdf4==1.7.5.1.post1
+    - rasterio==1.4.4
+    - xclim==0.62.0        # verificación cruzada del conteo de olas (la 1.0 retiró xclim.indices)
+    - folium==1.0.0
+    - jupyterlab==4.6.6
+    - ipykernel==7.4.0
+    - nbconvert==7.17.2
+    - requests==2.34.2
+    # Solo para regenerar los datos con scripts/ (no hace falta para ejecutar el cuaderno; sin verificar)
     - pystac-client>=0.8
     - planetary-computer>=1.0

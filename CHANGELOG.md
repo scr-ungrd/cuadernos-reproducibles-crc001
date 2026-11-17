@@ -2,6 +2,15 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [Sin publicar]
+
+### Agregado
+- `MODEL_CARD.md` (Estándar de modelos).
+- `scripts/validar_modelos.py`, `metadata/validacion_modelos.md` y `metadata/validacion_modelos.csv`: sesgo de los cinco modelos contra Los Garzones y contra INCODER-AUT (estación independiente) y hindcast del método anclado. Resultado: el sesgo frío de la Tmáx es de 1,2 a 1,9 °C en promedio; el anclaje corrige el modelo crudo pero no mejora a la climatología simple.
+
+### Cambiado
+- `environment.yml` con versiones exactas, verificado con una ejecución completa en un entorno limpio (79 s).
+
 ## [2.0.0] - 2026-11-16
 
 ### Agregado
