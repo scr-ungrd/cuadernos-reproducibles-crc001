@@ -24,7 +24,7 @@ Los 10 archivos de `data/` están descritos en [`metadata/data_catalog.csv`](met
 | Derivados de ERA5-Land, Landsat, WorldCover y WorldPop | CC BY 4.0 |
 | Derivados de OpenStreetMap | ODbL 1.0 |
 
-**DOI.** El DOI de todas las versiones es [`10.5281/zenodo.20061609`](https://doi.org/10.5281/zenodo.20061609). La versión archivada hasta ahora es la v1.0.1 ([`10.5281/zenodo.20061610`](https://doi.org/10.5281/zenodo.20061610), 2026-05-06) y es anterior a la reescritura de noviembre de 2026. Los identificadores `id` de los archivos RDLS usan el DOI del concepto y se actualizarán con el DOI de la versión nueva cuando se publique.
+**DOI.** El DOI de todas las versiones es [`10.5281/zenodo.20061609`](https://doi.org/10.5281/zenodo.20061609). La versión actual es la v2.0.0 ([`10.5281/zenodo.24309440`](https://doi.org/10.5281/zenodo.24309440), 2026-11-16); la v1.0.1 ([`10.5281/zenodo.20061610`](https://doi.org/10.5281/zenodo.20061610), 2026-05-06) es anterior a la reescritura de noviembre de 2026. Los identificadores `id` de los archivos RDLS usan el DOI de la v2.0.0.
 
 ## Datos con acceso restringido
 

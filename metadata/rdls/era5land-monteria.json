@@ -1,5 +1,5 @@
 {
-  "id": "https://doi.org/10.5281/zenodo.20061609#era5land-monteria",
+  "id": "https://doi.org/10.5281/zenodo.24309440#era5land-monteria",
   "title": "Temperatura y Humidex diarios de ERA5-Land en Montería, 1985-2024",
   "description": "Temperatura máxima y mínima diarias, Humidex y punto de rocío a la hora del Humidex máximo en el punto de la estación Los Garzones, calculados desde la temperatura y el punto de rocío horarios de ERA5-Land. Solo contraste con las observaciones.",
   "risk_data_type": [

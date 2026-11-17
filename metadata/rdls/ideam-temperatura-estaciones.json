@@ -1,5 +1,5 @@
 {
-  "id": "https://doi.org/10.5281/zenodo.20061609#ideam-temperatura-estaciones",
+  "id": "https://doi.org/10.5281/zenodo.24309440#ideam-temperatura-estaciones",
   "title": "Temperatura máxima y mínima diarias de dos estaciones del IDEAM en Montería, 2005-2026",
   "description": "Series diarias de temperatura máxima y mínima del aire de las estaciones Aeropuerto Los Garzones (0013035501, 2015-2026) e INCODER-AUT (0013055040, 2005-2017), agregadas desde lecturas horarias del IDEAM. Incluye el número de lecturas por día. Datos observados; los días con menos de 20 lecturas quedan vacíos.",
   "risk_data_type": [

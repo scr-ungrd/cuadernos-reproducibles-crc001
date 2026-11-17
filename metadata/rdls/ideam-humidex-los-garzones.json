@@ -1,5 +1,5 @@
 {
-  "id": "https://doi.org/10.5281/zenodo.20061609#ideam-humidex-los-garzones",
+  "id": "https://doi.org/10.5281/zenodo.24309440#ideam-humidex-los-garzones",
   "title": "Humidex diario de la estación Aeropuerto Los Garzones, 2015-2026",
   "description": "Humidex máximo y medio de cada día calculado con la temperatura y la humedad relativa horarias de la estación Aeropuerto Los Garzones (0013035501) del IDEAM, con la temperatura y la humedad a la hora del máximo. Los días con menos de 18 horas válidas quedan vacíos.",
   "risk_data_type": [

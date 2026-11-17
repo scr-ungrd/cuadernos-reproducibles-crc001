@@ -18,8 +18,10 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 - ORCID de Mauricio Romero Torres en `CITATION.cff`.
 - Licencia de ERA5-Land: Copernicus pasó a CC BY 4.0 el 2025-07-02; se aclaró que la restricción de uso no comercial es de la API de Open-Meteo, no de los datos.
 
+### Archivo
+- Versión archivada en Zenodo (`10.5281/zenodo.24309440`); DOI escrito en el README, `DATA_STATEMENT.md`, `myst.yml` y el `id` de los archivos RDLS.
+
 ### Pendiente
-- Actualizar `DATA_STATEMENT.md`, el README y el `id` de los archivos RDLS con el DOI de la versión 2.0.0 una vez archivada en Zenodo.
 - Confirmar los marcadores de `AI_USE.md` (interfaz usada, fecha de ejecución en entorno limpio, datos enviados).
 
 ## [1.0.1] - 2026-05-06

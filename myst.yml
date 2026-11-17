@@ -19,12 +19,6 @@ project:
   license:
     content: CC-BY-SA-4.0
     code: MIT
-  funding:
-    - statement: Supported by Notebooks Now! at AGU
-      id: 10070
-      source:
-        - name: Alfred P. Sloan Foundation
-          doi: http://dx.doi.org/10.13039/100000879
   keywords:
     - Cambio climático
     - Olas de calor
@@ -35,7 +29,7 @@ project:
     - Córdoba
     - Caribe colombiano
     - Gestión del riesgo de desastres
-  doi: 10.5281/zenodo.20061610
+  doi: 10.5281/zenodo.24309440
   date: 2026-11-15
   venue:
     title: "Cuadernos Reproducibles de Conocimiento del Riesgo · UNGRD"
@@ -58,7 +52,6 @@ project:
     - id: article-pdf
       title: Generar PDF
   options:
-    journal_name: Notebooks Now!
     draft: false
   exports:
     - format: meca

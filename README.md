@@ -3,12 +3,11 @@
 [![Made with MyST](https://img.shields.io/badge/made%20with-MyST-orange)](https://mystmd.org)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc001/main?filepath=article.ipynb)
 [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/scr-ungrd/cuadernos-reproducibles-crc001/blob/main/article.ipynb)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20061610.svg)](https://doi.org/10.5281/zenodo.20061610)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24309440.svg)](https://doi.org/10.5281/zenodo.24309440)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 > **Cuaderno reproducible de conocimiento del riesgo.**
 > Subdirección para el Conocimiento del Riesgo (SCR), Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD), Colombia.
-> *Sometido a la iniciativa Notebooks Now! de la AGU.*
 
 - **Sitio:** <https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/>
 - **Cuaderno:** [`article.ipynb`](article.ipynb), con las salidas guardadas.
@@ -83,7 +82,7 @@ Las condiciones de cada fuente están en [`metadata/sources.csv`](metadata/sourc
 
 ## Cita y DOI
 
-El DOI de todas las versiones es [10.5281/zenodo.20061609](https://doi.org/10.5281/zenodo.20061609). La versión archivada hasta ahora es la v1.0.1 ([10.5281/zenodo.20061610](https://doi.org/10.5281/zenodo.20061610)), anterior a la reescritura de noviembre de 2026. Los metadatos de cita están en [`CITATION.cff`](CITATION.cff).
+El DOI de todas las versiones es [10.5281/zenodo.20061609](https://doi.org/10.5281/zenodo.20061609). La versión actual es la v2.0.0 ([10.5281/zenodo.24309440](https://doi.org/10.5281/zenodo.24309440)); la v1.0.1 ([10.5281/zenodo.20061610](https://doi.org/10.5281/zenodo.20061610)) es anterior a la reescritura de noviembre de 2026. Los metadatos de cita están en [`CITATION.cff`](CITATION.cff).
 
 ## Uso de inteligencia artificial
 

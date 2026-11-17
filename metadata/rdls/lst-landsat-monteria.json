@@ -1,5 +1,5 @@
 {
-  "id": "https://doi.org/10.5281/zenodo.20061609#lst-landsat-monteria",
+  "id": "https://doi.org/10.5281/zenodo.24309440#lst-landsat-monteria",
   "title": "Temperatura de superficie Landsat 8 y 9 en Montería, 2018-2024",
   "description": "Compuesto de temperatura de superficie (LST) diurna de la mañana, de 6 bandas (media y percentil 90 de todas las fechas y de la época seca, con el número de fechas válidas), a 30 m, en WGS 84 / UTM zona 18N.",
   "risk_data_type": [

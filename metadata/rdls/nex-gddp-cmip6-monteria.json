@@ -1,5 +1,5 @@
 {
-  "id": "https://doi.org/10.5281/zenodo.20061609#nex-gddp-cmip6-monteria",
+  "id": "https://doi.org/10.5281/zenodo.24309440#nex-gddp-cmip6-monteria",
   "title": "Proyecciones de temperatura NEX-GDDP-CMIP6 para Montería, 1985-2080",
   "description": "Temperatura máxima y mínima diarias de cinco modelos CMIP6 (ACCESS-CM2, MPI-ESM1-2-HR, MRI-ESM2-0, NorESM2-MM y CMCC-ESM2) bajo los escenarios SSP2-4.5, SSP3-7.0 y SSP5-8.5, para la celda que contiene a la estación Los Garzones, y resumen anual de una ventana de 3 por 3 celdas. Los escenarios no se promedian.",
   "risk_data_type": [
