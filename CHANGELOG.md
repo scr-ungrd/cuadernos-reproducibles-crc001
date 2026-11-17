@@ -2,7 +2,7 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
-## Sin publicar
+## [2.0.0] - 2026-11-16
 
 ### Agregado
 - Carpeta `metadata/`: `sources.csv`, `data_catalog.csv`, `DATA_DICTIONARY.md`, `descargas.csv` (sumas SHA-256) y 8 archivos RDLS 1.0.0 en `metadata/rdls/`.
@@ -19,7 +19,8 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 - Licencia de ERA5-Land: Copernicus pasó a CC BY 4.0 el 2025-07-02; se aclaró que la restricción de uso no comercial es de la API de Open-Meteo, no de los datos.
 
 ### Pendiente
-- Crear el *release* y la versión nueva en Zenodo; actualizar el `id` de los archivos RDLS con su DOI.
+- Actualizar `DATA_STATEMENT.md`, el README y el `id` de los archivos RDLS con el DOI de la versión 2.0.0 una vez archivada en Zenodo.
+- Confirmar los marcadores de `AI_USE.md` (interfaz usada, fecha de ejecución en entorno limpio, datos enviados).
 
 ## [1.0.1] - 2026-05-06
 
