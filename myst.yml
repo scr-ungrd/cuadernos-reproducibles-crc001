@@ -82,9 +82,12 @@ site:
     logo_text: "Montería: riesgo por calor"
     outline_maxdepth: 2
   nav:
-    - title: MyST Docs
-      url: https://mystmd.org/guide
+    - title: "← Cuadernos reproducibles"
+      url: https://scr-ungrd.github.io/cuadernos-reproducibles/
   actions:
+    - title: "Cuadernos reproducibles"
+      url: https://scr-ungrd.github.io/cuadernos-reproducibles/
+      static: true
     - title: Notebooks Now!
       url: https://data.agu.org/notebooks-now/
   template: https://github.com/myst-templates/article-theme/archive/4acce1eba558b301c2aadca99a7804aa6e294e1e.zip
