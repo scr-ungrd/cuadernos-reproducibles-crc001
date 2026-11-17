@@ -8,6 +8,9 @@
    más larga y más cercana al casco urbano, solo como contraste.
 4. ERA5-Land vía Open-Meteo (archive-api): tmax, tmin diarias y Humidex horario máximo, 1985-2024, solo como contraste.
 
+Cada descarga verifica que el número de filas coincide con el conteo de la fuente. Después de regenerar los datos,
+ejecute scripts/registrar_descargas.py para guardar las sumas de verificación en metadata/descargas.csv.
+
 Salidas (data/): ideam_diario_los_garzones.csv, ideam_humidex_diario_los_garzones.csv, ideam_diario_incoder.csv,
 era5land_diario_monteria.csv
 """
@@ -26,7 +29,18 @@ CAMBIO_SENSOR = pd.Timestamp("2023-09-11")
 URL = "https://www.datos.gov.co/resource/{}.json"
 
 
+def _conteo(id_, estacion, sensor=None):
+    """Número de filas que declara datos.gov.co para el mismo filtro (count(*))."""
+    params = {"codigoestacion": estacion, "$select": "count(*)"}
+    if sensor:
+        params["codigosensor"] = sensor
+    r = requests.get(URL.format(id_), params=params, timeout=300, headers={"User-Agent": USER_AGENT})
+    r.raise_for_status()
+    return int(r.json()[0]["count"])
+
+
 def _paginado(id_, estacion, sensor=None, pagina=25000):
+    esperado = _conteo(id_, estacion, sensor)
     filas, desde = [], 0
     while True:
         params = {"codigoestacion": estacion, "$select": "fechaobservacion,valorobservado",
@@ -47,6 +61,8 @@ def _paginado(id_, estacion, sensor=None, pagina=25000):
         if len(lote) < pagina:
             break
         desde += pagina
+    if len(filas) != esperado:        # la fuente cambió durante la descarga o la paginación falló: se repite la ejecución
+        raise RuntimeError(f"{id_}: se descargaron {len(filas)} filas y la fuente declara {esperado}")
     df = pd.DataFrame(filas)
     df["t"] = pd.to_datetime(df.fechaobservacion)
     df["v"] = df.valorobservado.astype(float)
