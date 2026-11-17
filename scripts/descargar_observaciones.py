@@ -24,6 +24,8 @@ from config import ESTACION, ESTACION_ANTIGUA, LAT, LON, USER_AGENT
 RAIZ = Path(__file__).resolve().parent.parent
 OUT = RAIZ / "data"
 OUT.mkdir(parents=True, exist_ok=True)
+UMBRAL_TN_MIN = 17           # °C; una Tmín menor es implausible en Montería (incluye lecturas de 0 °C)
+RANGO_DIURNO_MAX = 16        # °C; un rango diurno mayor indica un sensor defectuoso
 MIN_OBS_DIA = 20             # lecturas con dato para aceptar el día (temperatura máxima y mínima)
 CAMBIO_SENSOR = pd.Timestamp("2023-09-11")
 URL = "https://www.datos.gov.co/resource/{}.json"
@@ -69,6 +71,15 @@ def _paginado(id_, estacion, sensor=None, pagina=25000):
     return df.set_index("t").v
 
 
+def marcar_calidad(d):
+    """Columna control_calidad: «ok» o «falla» en los días con Tmáx y Tmín. Falla si Tmín < 17 °C, el rango diurno supera
+    16 °C o Tmín > Tmáx (los mismos criterios físicos de la sección 6.1 del cuaderno). Los valores no se modifican."""
+    completo = d.tx.notna() & d.tn.notna()
+    bueno = (d.tn >= UMBRAL_TN_MIN) & ((d.tx - d.tn) <= RANGO_DIURNO_MAX) & (d.tn <= d.tx)
+    d["control_calidad"] = np.where(completo, np.where(bueno, "ok", "falla"), "")
+    return d
+
+
 def ideam(estacion, archivo):
     mx, mn = _paginado("ccvq-rp9s", estacion), _paginado("afdg-3zpb", estacion)
     d = pd.DataFrame({"tx": mx.resample("D").max(), "n_tx": mx.resample("D").count(),
@@ -76,6 +87,7 @@ def ideam(estacion, archivo):
     d.loc[d.n_tx < MIN_OBS_DIA, "tx"] = np.nan
     d.loc[d.n_tn < MIN_OBS_DIA, "tn"] = np.nan
     d.index.name = "fecha"
+    marcar_calidad(d)
     d.to_csv(OUT / archivo)
     return d
 

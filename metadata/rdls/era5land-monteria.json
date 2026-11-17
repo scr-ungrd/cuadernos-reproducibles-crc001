@@ -42,7 +42,7 @@
   },
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "version": "2026-11",
-  "rights": "La API de Open-Meteo ofrece sus datos bajo CC BY 4.0 y su uso gratuito es solo no comercial. La licencia original de ERA5-Land (Copernicus) está por confirmar.",
+  "rights": "Los datos de la API de Open-Meteo están bajo CC BY 4.0 y ERA5-Land de Copernicus está bajo CC BY 4.0 desde el 2025-07-02. El uso gratuito de la API de Open-Meteo es solo no comercial (condición del servicio, no de la licencia).",
   "temporal_resolution": "P1D",
   "spatial_resolution": 9000,
   "resources": [

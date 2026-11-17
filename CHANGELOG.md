@@ -8,9 +8,13 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 - Carpeta `metadata/`: `sources.csv`, `data_catalog.csv`, `DATA_DICTIONARY.md`, `descargas.csv` (sumas SHA-256) y 8 archivos RDLS 1.0.0 en `metadata/rdls/`.
 - `DATA_STATEMENT.md`, `CITATION.cff`, `AI_USE.md` y este historial.
 - `scripts/registrar_descargas.py`.
+- Columna `control_calidad` (`ok`/`falla`) en `ideam_diario_los_garzones.csv` e `ideam_diario_incoder.csv`: marca los días con `tn` < 17 °C, rango diurno > 16 °C o `tn` > `tx`. Los valores no cambian.
 
 ### Cambiado
 - El cuaderno se reescribió con datos reales de seis fases (commit `d3993d5`, 2026-11-15): estaciones del IDEAM, NEX-GDDP-CMIP6, Landsat, WorldCover, WorldPop y OpenStreetMap.
+
+### Corregido
+- Licencia de ERA5-Land: Copernicus pasó a CC BY 4.0 el 2025-07-02; se aclaró que la restricción de uso no comercial es de la API de Open-Meteo, no de los datos.
 
 ### Pendiente
 - Crear el *release* y la versión nueva en Zenodo; actualizar el `id` de los archivos RDLS con su DOI.

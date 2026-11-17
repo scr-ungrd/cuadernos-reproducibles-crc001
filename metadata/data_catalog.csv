@@ -1,6 +1,6 @@
 archivo,descripcion,formato,tamano_bytes,fuentes,licencia
-data/ideam_diario_los_garzones.csv,"Temperatura máxima y mínima diarias de la estación IDEAM Aeropuerto Los Garzones (0013035501), con el número de lecturas por día",CSV,114142,ccvq-rp9s; afdg-3zpb,CC BY-SA 4.0
-data/ideam_diario_incoder.csv,"Temperatura máxima y mínima diarias de la estación IDEAM INCODER-AUT (0013055040), 2005-2017, solo como contraste",CSV,118344,ccvq-rp9s; afdg-3zpb,CC BY-SA 4.0
+data/ideam_diario_los_garzones.csv,"Temperatura máxima y mínima diarias de la estación IDEAM Aeropuerto Los Garzones (0013035501), con el número de lecturas por día",CSV,125149,ccvq-rp9s; afdg-3zpb,CC BY-SA 4.0
+data/ideam_diario_incoder.csv,"Temperatura máxima y mínima diarias de la estación IDEAM INCODER-AUT (0013055040), 2005-2017, solo como contraste",CSV,129476,ccvq-rp9s; afdg-3zpb,CC BY-SA 4.0
 data/ideam_humidex_diario_los_garzones.csv,Humidex diario calculado con la temperatura y la humedad relativa horarias de la estación Los Garzones,CSV,219431,sbwg-7ju4; uext-mhny,CC BY-SA 4.0
 data/era5land_diario_monteria.csv,"Temperatura diaria, Humidex y punto de rocío de ERA5-Land en el punto de la estación, solo como contraste",CSV,984342,ERA5-Land vía Open-Meteo,CC BY 4.0
 data/nex_gddp_celda_estacion.nc,"Temperatura máxima y mínima diarias de la celda NEX-GDDP-CMIP6 que contiene a la estación, por modelo y escenario, 1985-2080",NetCDF,2780586,NEX-GDDP-CMIP6,CC BY-SA 4.0

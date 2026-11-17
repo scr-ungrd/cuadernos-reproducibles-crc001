@@ -8,7 +8,7 @@ Las 10 fuentes, con su dirección exacta, versión o consulta, licencia y restri
 
 - **IDEAM** (datos.gov.co): `ccvq-rp9s`, `afdg-3zpb`, `sbwg-7ju4` y `uext-mhny`, filtrados por las estaciones 0013035501 y 0013055040. CC BY-SA 4.0. El portal actualiza estos conjuntos en el origen: los archivos de `data/` corresponden a la descarga del 2026-11-15, con datos hasta el 2026-11-13. Las sumas de verificación están en [`metadata/descargas.csv`](metadata/descargas.csv).
 - **NEX-GDDP-CMIP6** (NASA, `10.7917/OFSG3345`): CC BY-SA 4.0.
-- **ERA5-Land** por la API de archivo de Open-Meteo: CC BY 4.0 para los datos de la API; uso gratuito solo no comercial. La licencia original de ERA5-Land (Copernicus) está por confirmar.
+- **ERA5-Land** por la API de archivo de Open-Meteo: CC BY 4.0. Copernicus cambió la licencia de ERA5-Land a CC BY 4.0 el 2025-07-02 ([aviso de ECMWF](https://forum.ecmwf.int/t/cc-by-licence-to-replace-licence-to-use-copernicus-products-on-02-july-2025/13464)). El uso gratuito de la API de Open-Meteo es solo no comercial ([términos](https://open-meteo.com/en/terms)); es una condición del servicio y no de la licencia de los datos. La UNGRD la usa sin fines comerciales.
 - **Landsat Collection 2 Level-2** (USGS, vía Planetary Computer): dominio público.
 - **ESA WorldCover 2021** (`10.5281/zenodo.7254221`): CC BY 4.0.
 - **WorldPop 2020 Colombia, restringido a edificaciones** (`10.5258/SOTON/WP00684`): CC BY 4.0.
@@ -45,7 +45,7 @@ Ninguno.
 
 ## Validación técnica y limitaciones
 
-- Comprobaciones: depuración de las series del IDEAM con tres criterios físicos (sección 6.1 del cuaderno) y verificación del conteo de olas de calor contra `xclim.heat_wave_frequency` (secciones 4.3 y 6.2).
+- Comprobaciones: depuración de las series del IDEAM con tres criterios físicos (sección 6.1 del cuaderno); las series publicadas traen la columna `control_calidad` que marca los días que fallan y verificación del conteo de olas de calor contra `xclim.heat_wave_frequency` (secciones 4.3 y 6.2).
 - Limitaciones introducidas por el análisis y heredadas de las fuentes: sección 12.1 del cuaderno.
 - Este cuaderno es un ejercicio sin validar por una persona experta; no debe usarse para tomar decisiones (aviso al inicio del cuaderno).
 

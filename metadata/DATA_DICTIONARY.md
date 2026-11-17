@@ -13,6 +13,9 @@ Una fila por día de una estación del IDEAM. Los valores salen de lecturas hora
 | `n_tx` | Número de lecturas con dato en el día para `tx` | entero | lecturas | En `ideam_diario_los_garzones.csv` se guarda como decimal por la presencia de vacíos |
 | `tn` | Mínimo diario de la serie «Temperatura mínima del aire» | decimal | °C | Vacío si `n_tn` es menor que 20 |
 | `n_tn` | Número de lecturas con dato en el día para `tn` | entero | lecturas | |
+| `control_calidad` | Resultado del control físico del día | texto | | `ok` o `falla`; vacío si falta `tx` o `tn`. Falla si `tn` < 17 °C, si `tx` − `tn` > 16 °C o si `tn` > `tx` |
+
+**Valores imposibles.** Los valores de `tx` y `tn` se publican como los entrega la fuente; no se borran. Los días con `control_calidad` = `falla` (59 en Los Garzones, 83 en INCODER-AUT) incluyen lecturas de `tn` = 0 °C y de hasta −13,3 °C que no son temperaturas posibles en Montería: se deben excluir antes de analizarlos, como hace la sección 6.1 del cuaderno.
 
 Vacíos: en Los Garzones, `tx` 20,5 % y `tn` 16,3 %; en INCODER-AUT, `tx` 25,6 % y `tn` 28,5 %. Cobertura: Los Garzones del 2015-05-30 al 2026-11-13; INCODER-AUT del 2005-01-21 al 2017-05-02.
 
