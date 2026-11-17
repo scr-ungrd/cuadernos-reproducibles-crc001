@@ -9,7 +9,7 @@ El desarrollo de este cuaderno contó con la asistencia de modelos de IA de la f
 - **Herramienta y versión:** Claude Sonnet 4.6, Claude Sonnet 5 y Claude Sonnet 5.5. <confirmar si se usó Claude Code u otra interfaz>
 - **Fechas de uso:** del 2026-05-03 al 2026-11-16.
 - **Para qué se usó:** el historial muestra cambios asistidos en el texto y el código del cuaderno, los scripts de descarga y procesamiento, la plantilla Typst del PDF, los flujos de integración continua y la configuración del sitio. <confirmar el alcance real de cada uso>
-- **Revisión humana:** <describir quién leyó y probó el código, quién verificó las citas y las cifras, y cuándo se ejecutó el cuaderno en un entorno limpio>.
+- **Revisión humana:** Mauricio Romero Torres ([ORCID 0000-0003-3282-0372](https://orcid.org/0000-0003-3282-0372)) revisó el cuaderno. <confirmar: fecha de la ejecución en un entorno limpio>.
 - **Datos enviados a la herramienta:** <confirmar: ninguno que no sea público>. Los datos del repositorio son públicos y no contienen datos personales.
 - **Prompts y salidas:** no se conservan los prompts de las sesiones; las instrucciones permanentes están en `CLAUDE.md`.
 

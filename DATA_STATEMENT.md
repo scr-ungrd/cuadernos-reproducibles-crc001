@@ -34,7 +34,7 @@ Ninguno.
 
 - Los datos son observaciones meteorológicas, proyecciones climáticas, rásteres de cobertura, temperatura y población, y puntos de infraestructura. No contienen datos personales: los nombres de `osm_infraestructura_monteria.csv` son de instituciones.
 - No contienen conocimiento local ni tradicional sobre amenazas.
-- ¿El área de estudio incluye territorios, resguardos o consejos comunitarios de pueblos étnicos? <confirmar>. Autorización: «No aplica» si la respuesta es no; <constancia> si es sí.
+- ¿El área de estudio incluye territorios, resguardos o consejos comunitarios de pueblos étnicos? No. Autorización: «No aplica».
 
 ## Disponibilidad de código
 
@@ -52,4 +52,4 @@ Ninguno.
 ## Compromiso de preservación
 
 - Responsable: Subdirección para el Conocimiento del Riesgo, UNGRD (conocimiento@gestiondelriesgo.gov.co).
-- Los datos se conservarán al menos cinco años después de la publicación. <confirmar el compromiso institucional>
+- Los datos se conservarán al menos cinco años después de la publicación.
