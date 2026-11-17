@@ -1,0 +1,111 @@
+{
+  "id": "https://doi.org/10.5281/zenodo.20061609#ideam-temperatura-estaciones",
+  "title": "Temperatura máxima y mínima diarias de dos estaciones del IDEAM en Montería, 2005-2026",
+  "description": "Series diarias de temperatura máxima y mínima del aire de las estaciones Aeropuerto Los Garzones (0013035501, 2015-2026) e INCODER-AUT (0013055040, 2005-2017), agregadas desde lecturas horarias del IDEAM. Incluye el número de lecturas por día. Datos observados; los días con menos de 20 lecturas quedan vacíos.",
+  "risk_data_type": [
+    "hazard"
+  ],
+  "publisher": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
+  },
+  "contact_point": {
+    "name": "Subdirección para el Conocimiento del Riesgo",
+    "email": "conocimiento@gestiondelriesgo.gov.co"
+  },
+  "creator": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://github.com/scr-ungrd"
+  },
+  "spatial": {
+    "scale": "urban",
+    "countries": [
+      "COL"
+    ],
+    "gazetteer_entries": [
+      {
+        "id": "23001",
+        "scheme": "DIVIPOLA",
+        "description": "Montería, Córdoba"
+      }
+    ],
+    "bbox": [
+      -75.95,
+      8.68,
+      -75.8,
+      8.85
+    ]
+  },
+  "temporal": {
+    "start": "2005-01-21",
+    "end": "2026-11-13"
+  },
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "version": "2026-11",
+  "rights": "Datos del IDEAM bajo CC BY-SA 4.0; los derivados se publican con la misma licencia.",
+  "temporal_resolution": "P1D",
+  "resources": [
+    {
+      "id": "ideam-los-garzones",
+      "title": "Serie diaria de Los Garzones",
+      "description": "Temperatura máxima y mínima diarias, 2015-05-30 a 2026-11-13.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/ideam_diario_los_garzones.csv",
+      "format": "CSV",
+      "temporal": {
+        "start": "2015-05-30",
+        "end": "2026-11-13"
+      },
+      "temporal_resolution": "P1D"
+    },
+    {
+      "id": "ideam-incoder",
+      "title": "Serie diaria de INCODER-AUT",
+      "description": "Temperatura máxima y mínima diarias, 2005-01-21 a 2017-05-02; solo contraste.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/ideam_diario_incoder.csv",
+      "format": "CSV",
+      "temporal": {
+        "start": "2005-01-21",
+        "end": "2017-05-02"
+      },
+      "temporal_resolution": "P1D"
+    }
+  ],
+  "hazard": {
+    "event_sets": [
+      {
+        "id": "temperatura-observada",
+        "hazards": [
+          {
+            "type": "extreme_temperature",
+            "intensity_measure": "AirTemp:C",
+            "id": "temperatura-observada-calor",
+            "process": "extreme_heat"
+          }
+        ],
+        "analysis_type": "empirical",
+        "calculation_method": "observed"
+      }
+    ]
+  },
+  "lineage": {
+    "description": "Las lecturas horarias de las dos estaciones se agregaron por día (máximo para la temperatura máxima y mínimo para la mínima) con scripts/descargar_observaciones.py. Un día con menos de 20 lecturas queda vacío. Los datos crudos del IDEAM no se modifican.",
+    "sources": [
+      {
+        "id": "ccvq-rp9s",
+        "name": "Temperatura máxima del aire",
+        "url": "https://www.datos.gov.co/d/ccvq-rp9s",
+        "citation": "Instituto de Hidrología, Meteorología y Estudios Ambientales. (2026). Temperatura máxima del aire [Conjunto de datos]. Portal Nacional de Datos Abiertos. https://www.datos.gov.co/d/ccvq-rp9s",
+        "type": "dataset",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "id": "afdg-3zpb",
+        "name": "Temperatura mínima del aire",
+        "url": "https://www.datos.gov.co/d/afdg-3zpb",
+        "citation": "Instituto de Hidrología, Meteorología y Estudios Ambientales. (2026). Temperatura mínima del aire [Conjunto de datos]. Portal Nacional de Datos Abiertos. https://www.datos.gov.co/d/afdg-3zpb",
+        "type": "dataset",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  }
+}

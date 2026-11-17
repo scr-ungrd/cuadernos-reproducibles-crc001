@@ -1,0 +1,108 @@
+{
+  "id": "https://doi.org/10.5281/zenodo.20061609#nex-gddp-cmip6-monteria",
+  "title": "Proyecciones de temperatura NEX-GDDP-CMIP6 para Montería, 1985-2080",
+  "description": "Temperatura máxima y mínima diarias de cinco modelos CMIP6 (ACCESS-CM2, MPI-ESM1-2-HR, MRI-ESM2-0, NorESM2-MM y CMCC-ESM2) bajo los escenarios SSP2-4.5, SSP3-7.0 y SSP5-8.5, para la celda que contiene a la estación Los Garzones, y resumen anual de una ventana de 3 por 3 celdas. Los escenarios no se promedian.",
+  "risk_data_type": [
+    "hazard"
+  ],
+  "publisher": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
+  },
+  "contact_point": {
+    "name": "Subdirección para el Conocimiento del Riesgo",
+    "email": "conocimiento@gestiondelriesgo.gov.co"
+  },
+  "creator": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://github.com/scr-ungrd"
+  },
+  "spatial": {
+    "scale": "urban",
+    "countries": [
+      "COL"
+    ],
+    "gazetteer_entries": [
+      {
+        "id": "23001",
+        "scheme": "DIVIPOLA",
+        "description": "Montería, Córdoba"
+      }
+    ],
+    "bbox": [
+      -75.95,
+      8.68,
+      -75.8,
+      8.85
+    ]
+  },
+  "temporal": {
+    "start": "1985-01-01",
+    "end": "2080-12-31"
+  },
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "version": "2026-11",
+  "rights": "NEX-GDDP-CMIP6 se distribuye bajo CC BY-SA 4.0 (Thrasher et al., 2022); los derivados se publican con la misma licencia.",
+  "temporal_resolution": "P1D",
+  "spatial_resolution": 25000,
+  "resources": [
+    {
+      "id": "nex-celda-estacion",
+      "title": "Series diarias de la celda de la estación",
+      "description": "Temperatura máxima y mínima diarias por modelo y escenario, 1985-01-01 a 2080-12-31.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/nex_gddp_celda_estacion.nc",
+      "format": "NetCDF",
+      "temporal": {
+        "start": "1985-01-01",
+        "end": "2080-12-31"
+      },
+      "temporal_resolution": "P1D",
+      "spatial_resolution": 25000,
+      "coordinate_system": "EPSG:4326"
+    },
+    {
+      "id": "nex-ventana-3x3",
+      "title": "Resumen anual de la ventana de 3 por 3 celdas",
+      "description": "Temperatura media anual y fracción de días sobre el percentil 90, por modelo, escenario, año y celda.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/nex_gddp_celdas_3x3_anual.csv",
+      "format": "CSV",
+      "temporal": {
+        "start": "1985-01-01",
+        "end": "2080-12-31"
+      },
+      "temporal_resolution": "P1Y",
+      "spatial_resolution": 25000,
+      "coordinate_system": "EPSG:4326"
+    }
+  ],
+  "hazard": {
+    "event_sets": [
+      {
+        "id": "proyeccion-temperatura",
+        "hazards": [
+          {
+            "type": "extreme_temperature",
+            "intensity_measure": "AirTemp:C",
+            "id": "proyeccion-temperatura-calor",
+            "process": "extreme_heat"
+          }
+        ],
+        "analysis_type": "deterministic",
+        "calculation_method": "simulated"
+      }
+    ]
+  },
+  "lineage": {
+    "description": "Se extrajo la ventana de 3 por 3 celdas de 0,25 grados por el NetCDF Subset Service de THREDDS (scripts/extraer_nex_gddp.py) y se ensambló la celda de la estación y los índices anuales (scripts/procesar_nex.py). El percentil 90 se calcula con 1985–2014 para cada celda y modelo.",
+    "sources": [
+      {
+        "id": "nex-gddp-cmip6",
+        "name": "NASA Earth Exchange Global Daily Downscaled Projections - CMIP6",
+        "url": "https://doi.org/10.7917/OFSG3345",
+        "citation": "NASA Earth Exchange. (2021). NASA Earth Exchange Global Daily Downscaled Projections - CMIP6 [Conjunto de datos]. NASA Center for Climate Simulation. https://doi.org/10.7917/OFSG3345",
+        "type": "dataset",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  }
+}

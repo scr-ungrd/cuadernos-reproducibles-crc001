@@ -1,0 +1,91 @@
+{
+  "id": "https://doi.org/10.5281/zenodo.20061609#lst-landsat-monteria",
+  "title": "Temperatura de superficie Landsat 8 y 9 en Montería, 2018-2024",
+  "description": "Compuesto de temperatura de superficie (LST) diurna de la mañana, de 6 bandas (media y percentil 90 de todas las fechas y de la época seca, con el número de fechas válidas), a 30 m, en WGS 84 / UTM zona 18N.",
+  "risk_data_type": [
+    "hazard"
+  ],
+  "publisher": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
+  },
+  "contact_point": {
+    "name": "Subdirección para el Conocimiento del Riesgo",
+    "email": "conocimiento@gestiondelriesgo.gov.co"
+  },
+  "creator": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://github.com/scr-ungrd"
+  },
+  "spatial": {
+    "scale": "urban",
+    "countries": [
+      "COL"
+    ],
+    "gazetteer_entries": [
+      {
+        "id": "23001",
+        "scheme": "DIVIPOLA",
+        "description": "Montería, Córdoba"
+      }
+    ],
+    "bbox": [
+      -75.95,
+      8.68,
+      -75.8,
+      8.85
+    ]
+  },
+  "temporal": {
+    "start": "2018-01-01",
+    "end": "2024-12-31"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-11",
+  "rights": "Derivado de datos Landsat de dominio público; el compuesto se publica con CC BY 4.0. Reconocer al USGS como fuente.",
+  "resources": [
+    {
+      "id": "lst-compuesto",
+      "title": "Compuesto de LST",
+      "description": "GeoTIFF de 6 bandas a 30 m.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/lst_monteria_2018_2024.tif",
+      "format": "GeoTIFF",
+      "coordinate_system": "EPSG:32618",
+      "spatial_resolution": 30,
+      "temporal": {
+        "start": "2018-01-01",
+        "end": "2024-12-31"
+      }
+    }
+  ],
+  "hazard": {
+    "event_sets": [
+      {
+        "id": "lst-compuesto",
+        "hazards": [
+          {
+            "type": "extreme_temperature",
+            "intensity_measure": "LST:K",
+            "id": "lst-compuesto-calor",
+            "process": "extreme_heat"
+          }
+        ],
+        "analysis_type": "empirical",
+        "calculation_method": "inferred"
+      }
+    ]
+  },
+  "lineage": {
+    "description": "Se usó la banda térmica lwir11 (ST_B10) de Landsat 8 y 9 con escenas de nubosidad inferior a 40 % y la máscara qa_pixel; se calculó la media y el percentil 90 por celda (scripts/extraer_lst_landsat.py).",
+    "sources": [
+      {
+        "id": "landsat-c2-l2",
+        "name": "Landsat Collection 2 Level-2",
+        "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2",
+        "citation": "U.S. Geological Survey. (s. f.). Landsat Collection 2 Level-2 [Conjunto de datos]. Microsoft Planetary Computer. https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2",
+        "type": "dataset",
+        "license": "Dominio público (política de datos del USGS)"
+      }
+    ]
+  }
+}

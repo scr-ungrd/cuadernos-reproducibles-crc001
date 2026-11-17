@@ -1,0 +1,93 @@
+{
+  "id": "https://doi.org/10.5281/zenodo.20061609#era5land-monteria",
+  "title": "Temperatura y Humidex diarios de ERA5-Land en Montería, 1985-2024",
+  "description": "Temperatura máxima y mínima diarias, Humidex y punto de rocío a la hora del Humidex máximo en el punto de la estación Los Garzones, calculados desde la temperatura y el punto de rocío horarios de ERA5-Land. Solo contraste con las observaciones.",
+  "risk_data_type": [
+    "hazard"
+  ],
+  "publisher": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
+  },
+  "contact_point": {
+    "name": "Subdirección para el Conocimiento del Riesgo",
+    "email": "conocimiento@gestiondelriesgo.gov.co"
+  },
+  "creator": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://github.com/scr-ungrd"
+  },
+  "spatial": {
+    "scale": "urban",
+    "countries": [
+      "COL"
+    ],
+    "gazetteer_entries": [
+      {
+        "id": "23001",
+        "scheme": "DIVIPOLA",
+        "description": "Montería, Córdoba"
+      }
+    ],
+    "bbox": [
+      -75.95,
+      8.68,
+      -75.8,
+      8.85
+    ]
+  },
+  "temporal": {
+    "start": "1985-01-01",
+    "end": "2024-12-31"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "2026-11",
+  "rights": "La API de Open-Meteo ofrece sus datos bajo CC BY 4.0 y su uso gratuito es solo no comercial. La licencia original de ERA5-Land (Copernicus) está por confirmar.",
+  "temporal_resolution": "P1D",
+  "spatial_resolution": 9000,
+  "resources": [
+    {
+      "id": "era5land-diario",
+      "title": "Serie diaria ERA5-Land",
+      "description": "Serie diaria 1985-01-01 a 2024-12-31.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/era5land_diario_monteria.csv",
+      "format": "CSV",
+      "temporal": {
+        "start": "1985-01-01",
+        "end": "2024-12-31"
+      },
+      "temporal_resolution": "P1D",
+      "spatial_resolution": 9000
+    }
+  ],
+  "hazard": {
+    "event_sets": [
+      {
+        "id": "temperatura-reanalisis",
+        "hazards": [
+          {
+            "type": "extreme_temperature",
+            "intensity_measure": "AirTemp:C",
+            "id": "temperatura-reanalisis-calor",
+            "process": "extreme_heat"
+          }
+        ],
+        "analysis_type": "empirical",
+        "calculation_method": "simulated"
+      }
+    ]
+  },
+  "lineage": {
+    "description": "Se descargó la temperatura a 2 m y el punto de rocío horarios del modelo era5_land para el punto 8,826 N y 75,825 O, y se agregaron por día con scripts/descargar_observaciones.py. El Humidex se calcula con la fórmula de Masterton y Richardson.",
+    "sources": [
+      {
+        "id": "open-meteo-era5land",
+        "name": "ERA5-Land por la API de archivo de Open-Meteo",
+        "url": "https://archive-api.open-meteo.com/v1/archive",
+        "citation": "Zippenfenig, P. (2023). Open-Meteo.com Weather API [Software]. Zenodo. https://doi.org/10.5281/zenodo.7970649",
+        "type": "dataset",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ]
+  }
+}

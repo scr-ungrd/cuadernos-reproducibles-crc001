@@ -1,0 +1,99 @@
+{
+  "id": "https://doi.org/10.5281/zenodo.20061609#ideam-humidex-los-garzones",
+  "title": "Humidex diario de la estación Aeropuerto Los Garzones, 2015-2026",
+  "description": "Humidex máximo y medio de cada día calculado con la temperatura y la humedad relativa horarias de la estación Aeropuerto Los Garzones (0013035501) del IDEAM, con la temperatura y la humedad a la hora del máximo. Los días con menos de 18 horas válidas quedan vacíos.",
+  "risk_data_type": [
+    "hazard"
+  ],
+  "publisher": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/"
+  },
+  "contact_point": {
+    "name": "Subdirección para el Conocimiento del Riesgo",
+    "email": "conocimiento@gestiondelriesgo.gov.co"
+  },
+  "creator": {
+    "name": "Subdirección para el Conocimiento del Riesgo, Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)",
+    "url": "https://github.com/scr-ungrd"
+  },
+  "spatial": {
+    "scale": "urban",
+    "countries": [
+      "COL"
+    ],
+    "gazetteer_entries": [
+      {
+        "id": "23001",
+        "scheme": "DIVIPOLA",
+        "description": "Montería, Córdoba"
+      }
+    ],
+    "bbox": [
+      -75.95,
+      8.68,
+      -75.8,
+      8.85
+    ]
+  },
+  "temporal": {
+    "start": "2015-05-30",
+    "end": "2026-11-13"
+  },
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "version": "2026-11",
+  "rights": "Datos del IDEAM bajo CC BY-SA 4.0; los derivados se publican con la misma licencia.",
+  "temporal_resolution": "P1D",
+  "resources": [
+    {
+      "id": "humidex-los-garzones",
+      "title": "Humidex diario",
+      "description": "Humidex diario, 2015-05-30 a 2026-11-13.",
+      "download_url": "https://raw.githubusercontent.com/scr-ungrd/cuadernos-reproducibles-crc001/main/data/ideam_humidex_diario_los_garzones.csv",
+      "format": "CSV",
+      "temporal": {
+        "start": "2015-05-30",
+        "end": "2026-11-13"
+      },
+      "temporal_resolution": "P1D"
+    }
+  ],
+  "hazard": {
+    "event_sets": [
+      {
+        "id": "humidex-observado",
+        "hazards": [
+          {
+            "type": "extreme_temperature",
+            "intensity_measure": "HI:-",
+            "id": "humidex-observado-calor",
+            "process": "extreme_heat"
+          }
+        ],
+        "analysis_type": "empirical",
+        "calculation_method": "inferred"
+      }
+    ]
+  },
+  "lineage": {
+    "description": "El punto de rocío se calcula con la aproximación de Magnus y el Humidex con la fórmula de Masterton y Richardson a partir de la temperatura y la humedad horarias; se descartan lecturas con humedad fuera de 5 %-100 % o temperatura fuera de 10-50 °C. Los sensores anteriores y posteriores al cambio del 2023-09-11 se unen en esa fecha. Procesamiento en scripts/descargar_observaciones.py.",
+    "sources": [
+      {
+        "id": "sbwg-7ju4",
+        "name": "Temperatura ambiente del aire",
+        "url": "https://www.datos.gov.co/d/sbwg-7ju4",
+        "citation": "Instituto de Hidrología, Meteorología y Estudios Ambientales. (2026). Temperatura ambiente del aire [Conjunto de datos]. Portal Nacional de Datos Abiertos. https://www.datos.gov.co/d/sbwg-7ju4",
+        "type": "dataset",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      {
+        "id": "uext-mhny",
+        "name": "Humedad del aire",
+        "url": "https://www.datos.gov.co/d/uext-mhny",
+        "citation": "Instituto de Hidrología, Meteorología y Estudios Ambientales. (2026). Humedad del aire [Conjunto de datos]. Portal Nacional de Datos Abiertos. https://www.datos.gov.co/d/uext-mhny",
+        "type": "dataset",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
+  }
+}

@@ -33,6 +33,8 @@ El alcance y las limitaciones de cada fase están en las secciones 1 y 12 del cu
 | `article.ipynb` | Cuaderno principal (corre completo sin credenciales con los datos de `data/`) |
 | `data/` | Series y rásteres recortados al área de estudio (unos 25 MB); `data/final/` guarda figuras y tablas |
 | `scripts/` | Descarga y procesamiento desde las fuentes originales; `scripts/config.py` fija la ciudad |
+| `metadata/` | Fuentes (`sources.csv`), catálogo y diccionario de datos, sumas SHA-256 (`descargas.csv`) y metadatos RDLS (`rdls/`) |
+| `DATA_STATEMENT.md`, `CITATION.cff`, `CHANGELOG.md`, `AI_USE.md` | Disponibilidad de datos y de código, cita, historial de cambios y uso de IA |
 | `references.bib` | Bibliografía |
 | `_templates/plain-typst-article/` | Plantilla Typst del PDF |
 | `myst.yml`, `.github/workflows/deploy.yml` | Sitio MyST y publicación en GitHub Pages |
@@ -69,4 +71,20 @@ myst build --typst     # PDF con la plantilla Typst (requiere Typst y la fuente 
 
 ## Licencia
 
-Texto y figuras bajo CC BY-SA 4.0; código bajo licencia MIT. Las fuentes de datos conservan sus propias licencias (IDEAM, NASA, ESA, WorldPop y © colaboradores de OpenStreetMap, ODbL).
+Texto y figuras bajo CC BY-SA 4.0; código bajo licencia MIT. Los datos de `data/` conservan la licencia de su fuente, indicada por archivo en [`metadata/data_catalog.csv`](metadata/data_catalog.csv):
+
+| Datos | Licencia |
+|---|---|
+| Derivados del IDEAM y de NEX-GDDP-CMIP6 | CC BY-SA 4.0 |
+| Derivados de ERA5-Land, Landsat, WorldCover y WorldPop | CC BY 4.0 |
+| Derivados de OpenStreetMap | ODbL 1.0 |
+
+Las condiciones de cada fuente están en [`metadata/sources.csv`](metadata/sources.csv) y la declaración completa en [`DATA_STATEMENT.md`](DATA_STATEMENT.md).
+
+## Cita y DOI
+
+El DOI de todas las versiones es [10.5281/zenodo.20061609](https://doi.org/10.5281/zenodo.20061609). La versión archivada hasta ahora es la v1.0.1 ([10.5281/zenodo.20061610](https://doi.org/10.5281/zenodo.20061610)), anterior a la reescritura de noviembre de 2026. Los metadatos de cita están en [`CITATION.cff`](CITATION.cff).
+
+## Uso de inteligencia artificial
+
+El desarrollo de este repositorio contó con la asistencia de modelos de IA de la familia Claude (Sonnet 4.6, 5 y 5.5), según el historial de commits. El registro y la declaración están en [`AI_USE.md`](AI_USE.md).
