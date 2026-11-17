@@ -37,6 +37,10 @@ project:
     - Gestión del riesgo de desastres
   doi: 10.5281/zenodo.20061610
   date: 2026-11-15
+  venue:
+    title: "Cuadernos Reproducibles de Conocimiento del Riesgo · UNGRD"
+    short_title: "Cuadernos reproducibles"
+    url: https://scr-ungrd.github.io/cuadernos-reproducibles/
   requirements:
     - environment.yml
   toc:
@@ -80,14 +84,9 @@ site:
   title: Riesgo por calor urbano en Montería
   options:
     logo_text: "Montería: riesgo por calor"
+    style: ./css/home.css
     outline_maxdepth: 2
   nav:
     - title: "← Cuadernos reproducibles"
       url: https://scr-ungrd.github.io/cuadernos-reproducibles/
-  actions:
-    - title: "Cuadernos reproducibles"
-      url: https://scr-ungrd.github.io/cuadernos-reproducibles/
-      static: true
-    - title: Notebooks Now!
-      url: https://data.agu.org/notebooks-now/
   template: https://github.com/myst-templates/article-theme/archive/4acce1eba558b301c2aadca99a7804aa6e294e1e.zip
