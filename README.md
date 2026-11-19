@@ -34,6 +34,7 @@ El alcance y las limitaciones de cada fase están en las secciones 1 y 12 del cu
 | `scripts/` | Descarga y procesamiento desde las fuentes originales; `scripts/config.py` fija la ciudad |
 | `metadata/` | Fuentes (`sources.csv`), catálogo y diccionario de datos, sumas SHA-256 (`descargas.csv`) y metadatos RDLS (`rdls/`) |
 | `DATA_STATEMENT.md`, `CITATION.cff`, `CHANGELOG.md`, `AI_USE.md` | Disponibilidad de datos y de código, cita, historial de cambios y uso de IA |
+| `SECURITY.md`, `metadata/escaneo_seguridad.md` | Política de seguridad y registro del escaneo previo al release |
 | `references.bib` | Bibliografía |
 | `_templates/plain-typst-article/` | Plantilla Typst del PDF |
 | `myst.yml`, `.github/workflows/deploy.yml` | Sitio MyST y publicación en GitHub Pages |

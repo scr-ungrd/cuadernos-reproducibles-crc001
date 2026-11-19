@@ -5,11 +5,15 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 ## [Sin publicar]
 
 ### Agregado
+- `SECURITY.md` (cómo reportar una vulnerabilidad o una filtración) y `metadata/escaneo_seguridad.md` (registro del escaneo de secretos y de vulnerabilidades del 2026-11-19).
 - `MODEL_CARD.md` (Estándar de modelos).
 - `scripts/probar_datos.py`: estructura, duplicados, rangos, control de calidad del IDEAM y sumas SHA-256; el despliegue lo ejecuta antes de construir el sitio.
 - `scripts/validar_modelos.py`, `metadata/validacion_modelos.md` y `metadata/validacion_modelos.csv`: sesgo de los cinco modelos contra Los Garzones y contra INCODER-AUT (estación independiente) y hindcast del método anclado. Resultado: el sesgo frío de la Tmáx es de 1,2 a 1,9 °C en promedio; el anclaje corrige el modelo crudo pero no mejora a la climatología simple.
 
 ### Cambiado
+- `article.ipynb`, celda de preparación: el `%pip install` de respaldo para Colab fija las mismas versiones de `environment.yml` y la salida ya no muestra la ruta local del equipo.
+- `.github/workflows/deploy.yml`: permisos mínimos por trabajo, `mystmd` con versión fija y Typst con suma de verificación SHA-256.
+- `.gitignore`: excluye `.env`.
 - `metadata/sources.csv`: identificador de OpenStreetMap y fechas de actualización de la fuente, que estaban vacíos.
 - `DATA_STATEMENT.md`: declara que los datos son una versión final (sección «Actualización»).
 - `LICENSE-CC-BY-SA-4.0` para el texto, las figuras y los datos derivados del IDEAM y de NEX-GDDP-CMIP6.

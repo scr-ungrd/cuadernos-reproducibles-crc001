@@ -7,3 +7,8 @@ __pycache__/
 
 # Cachés de descarga (se regeneran con scripts/)
 data/raw
+
+# Secretos y configuración local (nunca se versionan)
+.env
+.env.*
+!.env.example
